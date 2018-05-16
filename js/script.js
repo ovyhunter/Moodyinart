@@ -1,0 +1,1 @@
+stylesheet.insertRule(".sub-menu { display: block;}", 0);
