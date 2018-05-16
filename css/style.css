@@ -121,3 +121,11 @@ header {
     width: 100%;
     height: auto;
 }
+
+/*Gallery_1*/
+
+.gallery_1 {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+}
