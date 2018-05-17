@@ -132,3 +132,62 @@ header {
     height: auto;
     padding: 5%;
 }
+
+/* Portfolio */
+
+.wrapper-title{
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin: 1em;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../img/gallery_1/IMG_0126.jpg");
+
+    /* Set a specific height */
+    height: 300px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("../img/gallery_1/IMG_2024.jpg");
+
+    /* Set a specific height */
+    height: 300px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    /* The image used */
+    background-image: url("../img/gallery_1/IMG_3001.jpg");
+
+    /* Set a specific height */
+    height: 300px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery-btn{
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    display: flex;
+    align-items: flex-end;
+}
