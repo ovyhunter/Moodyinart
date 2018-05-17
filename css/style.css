@@ -7,11 +7,6 @@ body {
     background-color: black;
 }
 
-header {
-    color: white;
-    text-align: center;
-}
-
 /* Burger Menu */
 
 #menuToggle {
@@ -102,12 +97,20 @@ header {
 }
 
 .sub-menu {
-    margin-left: 1vw;
-    display: none;
+    display: block;
+    border: none;
+    color: black;
+    background-color: transparent;
 }
 
+/* Index */
 
-/*About */
+header {
+    color: white;
+    text-align: center;
+}
+
+/* About */
 
 .about {
     padding: 5%;

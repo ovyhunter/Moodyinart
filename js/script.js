@@ -1,1 +1,2 @@
-stylesheet.insertRule(".sub-menu { display: block;}", 0);
+let submenu = document.querySelector(".sub-menu");
+console.log(submenu)
