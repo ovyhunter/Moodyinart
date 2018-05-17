@@ -96,12 +96,7 @@ body {
     transform: none;
 }
 
-.sub-menu {
-    display: block;
-    border: none;
-    color: black;
-    background-color: transparent;
-}
+
 
 /* Index */
 
@@ -154,11 +149,30 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 0px 0px 150px 20px #000000;
+    
+    /* Button/text arrangement */
+    display: flex;
+    justify-content: space-between;
+    }
+
+.parallax a{
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    align-self: flex-end;
+}
+
+.parallax p{
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    align-self: flex-end;
 }
 
 .parallax2 {
     /* The image used */
-    background-image: url("../img/gallery_1/IMG_2024.jpg");
+    background-image: url("../img/gallery_1/IMG_2995.jpg");
 
     /* Set a specific height */
     height: 300px; 
@@ -168,11 +182,30 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 0px 0px 150px 20px #000000;
+    
+    /* Button/text arrangement */
+    display: flex;
+    justify-content: space-between;
+    }
+
+.parallax2 a{
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    align-self: flex-end;
+}
+
+.parallax2 p{
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    align-self: flex-end;
 }
 
 .parallax3 {
     /* The image used */
-    background-image: url("../img/gallery_1/IMG_3001.jpg");
+    background-image: url("../img/gallery_1/IMG_0600.jpg");
 
     /* Set a specific height */
     height: 300px; 
@@ -182,12 +215,23 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+    box-shadow: 0px 0px 150px 20px #000000;
+    
+    /* Button/text arrangement */
+    display: flex;
+    justify-content: space-between;
+    }
 
-.gallery-btn{
+.parallax3 a{
     text-decoration: none;
     color: white;
     padding: 1em;
-    display: flex;
-    align-items: flex-end;
+    align-self: flex-end;
+}
+
+.parallax3 p{
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    align-self: flex-end;
 }
