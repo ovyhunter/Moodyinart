@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
@@ -69,8 +69,8 @@ body {
 
 #menu {
     position: absolute;
-    width: 100%;
-    margin: -100px 0 0 -50px;
+    width: 120%;
+    margin: -100px 0 0px -50px;
     padding: 50px;
     padding-top: 125px;
     background-color: white;
@@ -85,6 +85,11 @@ body {
     padding: 10px 0;
     font-size: 1.5em;
     color: black;
+    }
+
+#menu li:hover{
+    color: gray;
+    transition: 0.5s ease;
 }
 
 #menu a {
@@ -96,8 +101,6 @@ body {
     transform: none;
 }
 
-
-
 /* Index */
 
 header {
@@ -105,9 +108,67 @@ header {
     text-align: center;
 }
 
+header h1{
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+    font-size: 2.5em;
+}
+
+header h2{
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    font-size: 1.5em;
+}
+
+#menuToggle img{
+    width: 20%;
+    height: auto;
+}
+
+.container{
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.video-wrapper iframe{
+    width: 100%;
+}
+
+footer{
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+#insta-link{
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    margin: 0;
+    padding: 0.1em 0.7em 0.1em 0.7em;
+    text-decoration: none;
+}
+
+#insta-button{
+    display: flex;
+    justify-content: center;
+    margin: 2em;    
+}
+
 /* About */
 
-.about {
+.about{
     padding: 5%;
     margin-left: 10%;
     margin-right: 10%;
