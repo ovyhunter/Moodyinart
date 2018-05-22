@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -7,98 +7,145 @@ body {
     background-color: black;
 }
 
-/* Burger Menu */
-
-#menuToggle {
-    display: block;
-    position: relative;
-    top: 3vh;
-    left: 5vw;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
+.logo{
+    width: 8%;
+    float: left;
 }
 
-#menuToggle input {
-    display: block;
-    width: 40px;
-    height: 35px;
-    position: absolute;
-    top: -5px;
-    left: -4px;
-    opacity: 0;
-    z-index: 2;
-    -webkit-touch-callout: none;
-}
+/* Menu */
 
-#menuToggle span {
-    display: block;
-    width: 30px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: white;
-    z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-    transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-}
-
-#menuToggle input:checked ~ span {
-    transform: rotate(45deg);
-    background: black;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg);
-}
-
-#menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg);
-}
-
-#menu {
-    position: absolute;
-    width: 120%;
-    margin: -100px 0 0px -50px;
-    padding: 50px;
-    padding-top: 125px;
-    background-color: white;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
-
-#menu li {
-    padding: 10px 0;
-    font-size: 1.5em;
-    color: black;
+@media screen and (min-width: 992px) {
+    .menu_checkbox {
+        display: none;
     }
 
-#menu li:hover{
-    color: gray;
-    transition: 0.5s ease;
+    nav {
+        margin-top: 1%;
+    }
+    
+    #menu a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li {
+        display: inline;
+        padding: 10px;
+        font-size: 120%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    #menu li:hover {
+        color: gray;
+        transition: 0.5s ease;
+    }
 }
 
-#menu a {
-    text-decoration: none;
-    text-align: left;
-}
 
-#menuToggle input:checked ~ ul {
-    transform: none;
+
+@media screen and (max-width: 992px) {
+/*     Logo */
+    .logo{
+        display: none;
+    }
+    
+    /* Burger Menu */
+    #menuToggle {
+        display: block;
+        position: relative;
+        top: 3vh;
+        left: 5vw;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 35px;
+        position: absolute;
+        top: -5px;
+        left: -4px;
+        opacity: 0;
+        z-index: 2;
+        -webkit-touch-callout: none;
+    }
+
+    #menuToggle span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: white;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    #menuToggle input:checked ~ span {
+        transform: rotate(45deg);
+        background: black;
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg);
+    }
+
+    #menu {
+        position: absolute;
+        width: 120%;
+        margin: -100px 0 0px -50px;
+        padding: 50px;
+        padding-top: 125px;
+        background-color: white;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 1.5em;
+        color: black;
+    }
+
+    #menu li:hover {
+        color: gray;
+        transition: 0.5s ease;
+    }
+
+    #menu a {
+        text-decoration: none;
+        text-align: left;
+    }
+
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
 }
 
 /* Index */
@@ -108,30 +155,30 @@ header {
     text-align: center;
 }
 
-header h1{
+header h1 {
     margin-top: 10vh;
     margin-bottom: 2vh;
     font-size: 2.5em;
 }
 
-header h2{
+header h2 {
     margin-top: 5vh;
     margin-bottom: 2vh;
     font-size: 1.5em;
 }
 
-#menuToggle img{
+#menuToggle img {
     width: 20%;
     height: auto;
 }
 
-.container{
+.container {
     padding: 1%;
     display: flex;
     flex-direction: column;
 }
 
-.video-wrapper{
+.video-wrapper {
     width: 100%;
     height: auto;
     display: flex;
@@ -140,18 +187,18 @@ header h2{
     margin-bottom: 3vh;
 }
 
-.video-wrapper iframe{
+.video-wrapper iframe {
     width: 100%;
 }
 
-footer{
+footer {
     color: white;
     font-size: 0.9em;
     text-align: center;
     margin-top: 2em;
 }
 
-#insta-link{
+#insta-link {
     color: white;
     text-align: center;
     border: 1px solid white;
@@ -160,15 +207,15 @@ footer{
     text-decoration: none;
 }
 
-#insta-button{
+#insta-button {
     display: flex;
     justify-content: center;
-    margin: 2em;    
+    margin: 2em;
 }
 
 /* About */
 
-.about{
+.about {
     padding: 5%;
     margin-left: 10%;
     margin-right: 10%;
@@ -191,7 +238,7 @@ footer{
 
 /* Portfolio */
 
-.wrapper-title{
+.wrapper-title {
     color: white;
     text-align: center;
     font-size: 2em;
@@ -203,7 +250,7 @@ footer{
     background-image: url("../img/gallery_1/IMG_0126.jpg");
 
     /* Set a specific height */
-    height: 300px; 
+    height: 300px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -211,13 +258,13 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0px 0px 150px 20px #000000;
-    
+
     /* Button/text arrangement */
     display: flex;
     justify-content: space-between;
-    }
+}
 
-.parallax a{
+.parallax a {
     text-decoration: none;
     color: white;
     padding: 1em;
@@ -225,7 +272,7 @@ footer{
     margin-bottom: 1rem;
 }
 
-.parallax p{
+.parallax p {
     text-decoration: none;
     color: white;
     padding: 1em;
@@ -237,7 +284,7 @@ footer{
     background-image: url("../img/gallery_1/IMG_2995.jpg");
 
     /* Set a specific height */
-    height: 300px; 
+    height: 300px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -245,13 +292,13 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0px 0px 150px 20px #000000;
-    
+
     /* Button/text arrangement */
     display: flex;
     justify-content: space-between;
-    }
+}
 
-.parallax2 a{
+.parallax2 a {
     text-decoration: none;
     color: white;
     padding: 1em;
@@ -259,7 +306,7 @@ footer{
     margin-bottom: 1rem;
 }
 
-.parallax2 p{
+.parallax2 p {
     text-decoration: none;
     color: white;
     padding: 1em;
@@ -271,7 +318,7 @@ footer{
     background-image: url("../img/gallery_1/IMG_0600.jpg");
 
     /* Set a specific height */
-    height: 300px; 
+    height: 300px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -279,13 +326,13 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0px 0px 150px 20px #000000;
-    
+
     /* Button/text arrangement */
     display: flex;
     justify-content: space-between;
-    }
+}
 
-.parallax3 a{
+.parallax3 a {
     text-decoration: none;
     color: white;
     padding: 1em;
@@ -293,7 +340,7 @@ footer{
     margin-bottom: 1rem;
 }
 
-.parallax3 p{
+.parallax3 p {
     text-decoration: none;
     color: white;
     padding: 1em;
