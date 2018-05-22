@@ -10,6 +10,7 @@ body {
 .logo{
     width: 8%;
     float: left;
+    padding-left: 10px;
 }
 
 /* Menu */
@@ -42,6 +43,9 @@ body {
     #menu li:hover {
         color: gray;
         transition: 0.5s ease;
+    }
+    .menu_underline{
+        border-bottom: 2px solid white;
     }
 }
 
