@@ -57,7 +57,7 @@ body {
 
 
 @media screen and (max-width: 992px) {
-    /*     Logo */
+    /* Logo */
     .logo {
         display: none;
     }
@@ -180,12 +180,17 @@ header h1 {
     margin-top: 10vh;
     margin-bottom: 1vh;
     font-size: 2.5em;
+    font-family: 'Gruppo', cursive;
+    letter-spacing: 10px;
+    text-transform: uppercase;
 }
 
 header h2 {
     margin-top: 1vh;
     margin-bottom: 2vh;
     font-size: 1.5em;
+    font-family: 'Gruppo', cursive;
+    letter-spacing: 3px;
 }
 
 
@@ -262,7 +267,7 @@ footer {
 
 .parallax {
     /* The image used */
-    background-image: url("../img/gallery_1/IMG_0126.jpg");
+    background-image: url("../img/self-portraits/PicsArt_04-17-09.40.06.jpg");
 
     /* Set a specific height */
     height: 300px;
@@ -282,9 +287,10 @@ footer {
 .parallax a {
     text-decoration: none;
     color: white;
-    padding: 1em;
+    padding: 0.4em;
+    margin: 1em;
     align-self: flex-end;
-    margin-bottom: 1rem;
+    border: 1px solid white;
 }
 
 .parallax p {
@@ -296,7 +302,7 @@ footer {
 
 .parallax2 {
     /* The image used */
-    background-image: url("../img/gallery_1/IMG_2995.jpg");
+    background-image: url("../img/gallery_1/IMG_0600.jpg");
 
     /* Set a specific height */
     height: 300px;
@@ -316,9 +322,10 @@ footer {
 .parallax2 a {
     text-decoration: none;
     color: white;
-    padding: 1em;
+    padding: 0.4em;
+    margin: 1em;
     align-self: flex-end;
-    margin-bottom: 1rem;
+    border: 1px solid white;
 }
 
 .parallax2 p {
@@ -330,7 +337,7 @@ footer {
 
 .parallax3 {
     /* The image used */
-    background-image: url("../img/gallery_1/IMG_0600.jpg");
+    background-image: url("../img/series/the_last_elf/IMG_0389.jpg");
 
     /* Set a specific height */
     height: 300px;
@@ -350,9 +357,10 @@ footer {
 .parallax3 a {
     text-decoration: none;
     color: white;
-    padding: 1em;
+    padding: 0.4em;
+    margin: 1em;
     align-self: flex-end;
-    margin-bottom: 1rem;
+    border: 1px solid white;
 }
 
 .parallax3 p {
