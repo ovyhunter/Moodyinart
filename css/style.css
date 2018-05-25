@@ -17,8 +17,9 @@ body {
 /* Menu */
 
 @media screen and (min-width: 992px) {
+    
     .menu_checkbox {
-        display: none;
+        display: none; /* hidding the chechbox */
     }
 
     nav {
@@ -33,22 +34,29 @@ body {
 
     nav ul li {
         display: inline;
+        /* putting all the list elements in the same line */
         padding: 10px;
         font-size: 120%;
     }
 
     nav ul {
         display: flex;
+        /* setting display: flex */
         justify-content: flex-end;
+        /* after that flex-end: items are packed toward to end line */
     }
 
+    /* hover effect changing the color */
     #menu li:hover {
         color: gray;
         transition: 0.5s ease;
     }
+    /* underline effect */ 
     .menu_underline {
         border-bottom: 2px solid white;
     }
+    
+    
     .gallery_1 {
         width: 30%;
     }
@@ -161,8 +169,8 @@ body {
         height: auto;
         padding: 5%;
     }
-    
-    header h1{
+
+    header h1 {
         margin-top: 15vh;
     }
 
