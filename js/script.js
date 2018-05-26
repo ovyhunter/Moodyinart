@@ -6,13 +6,12 @@ function fetchData() {
 }
 
 function showData(data) {
-    console.log(data);
+//    console.log(data);
     data.forEach(showSinglePost);
 }
 
 function showSinglePost(aPost) {
-    console.log(aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
-    console.log(aPost._embedded["wp:featuredmedia"][0].media_details);
+//    console.log(aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
     let template = document.querySelector("#about_template").content;
     let clone = template.cloneNode(true);
     clone.querySelector(".about_title").textContent = aPost.title.rendered;
