@@ -1,5 +1,5 @@
 // About Page
-function fetchData() {
+function fetchDataAbout() {
     fetch("http://www.paulchelaru.com/wp-json/wp/v2/about?_embed")
         .then(e => e.json())
         .then(showData)
@@ -24,4 +24,5 @@ function showSinglePost(aPost) {
 
 }
 
-fetchData()
+fetchDataAbout();
+
