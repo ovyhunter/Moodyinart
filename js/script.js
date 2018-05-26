@@ -1,5 +1,5 @@
 function fetchData() {
-    fetch("http://www.paulchelaru.com/wp-json/wp/v2/posts/")
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/about")
     .then( e => e.json())
     .then(showData)
 }
@@ -11,14 +11,13 @@ function showData(data){
 }
 
 function showSinglePost(aPost) {
-    
-    let template = document.querySelector("#blog_template").content;
+    console.log()
+    let template = document.querySelector("#about_template").content;
     let clone = template.cloneNode(true);
-    clone.querySelector(".blog_title").textContent = aPost.title.rendered;
-    clone.querySelector(".blog_p").innerHTML = aPost.content.rendered;
+    clone.querySelector(".about_title").textContent = aPost.title.rendered;
+    clone.querySelector(".about_p").innerHTML = aPost.content.rendered;
     
-    
-    let section = document.querySelector("#blog");
+    let section = document.querySelector("#about");
     section.appendChild(clone);
     
 }
