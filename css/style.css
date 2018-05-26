@@ -14,6 +14,11 @@ body {
     margin-bottom: -100px;
 }
 
+.about_title, .about_p{
+    font-size: 150%;
+    color: white;
+}
+
 /* Menu */
 
 @media screen and (min-width: 992px) {
