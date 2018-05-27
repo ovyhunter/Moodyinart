@@ -382,3 +382,57 @@ footer {
     padding: 1em;
     align-self: flex-end;
 }
+
+/* Gallery 3 */
+
+.gal3-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em;
+    padding: 3em;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.gal3-container img{
+    width: 500px;
+    height: 300px;
+    border: 1px solid white;
+}
+
+.gal3-container div{
+    margin: 1.5em;
+}
+
+.gal3-container span {
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-size: 2em;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 1;
+}
+
+/* Flash effect - source: Codepen
+
+https://codepen.io/nxworld/pen/ZYNOBZ */
+
+.gal3-container figure {
+	background: grey;
+}
+.gal3-container figure img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.gal3-container figure:hover img {
+	opacity: .5;
+}
