@@ -14,10 +14,11 @@ body {
     margin-bottom: -100px;
 }
 
-.about_title, .about_p{
-    font-size: 150%;
+.about_title, .about_p, .contact_title, .contact_p, .blog_title, .blog_p, .blog_date{
     color: white;
 }
+
+
 
 /* Menu */
 
