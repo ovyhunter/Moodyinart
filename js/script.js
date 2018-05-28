@@ -58,7 +58,7 @@ function showSinglePostContact(aPost) {
         } else { // no img
             clone.querySelector(".contact_img").remove();
         }
-        
+
         let section = document.querySelector("#contact");
         section.appendChild(clone);
     }
@@ -78,7 +78,7 @@ function fetchDataBlog() {
 }
 
 function showDataBlog(data) {
-    console.log(data);
+//    console.log(data);
     lookingForData = false;
     data.forEach(showSinglePostBlog);
 }
@@ -89,7 +89,7 @@ function showSinglePostBlog(aPost) {
         let template = document.querySelector("#blog_template").content;
         let clone = template.cloneNode(true);
         clone.querySelector(".blog_title").textContent = aPost.title.rendered;
-        clone.querySelector(".blog_p").innerHTML = aPost.content.rendered;        
+        clone.querySelector(".blog_p").innerHTML = aPost.content.rendered;
         clone.querySelector(".blog_date").textContent = aPost.acf.date;
 
         if (aPost._embedded["wp:featuredmedia"]) { //img is there
@@ -97,23 +97,24 @@ function showSinglePostBlog(aPost) {
         } else { // no img
             clone.querySelector(".blog_img").remove();
         }
-        
+
         let section = document.querySelector("#blog");
         section.appendChild(clone);
     }
 }
 fetchDataBlog();
 
-setInterval(function(){
-    if(bottomVisible() && lookingForData === false){
-        console.log("We have reached the bottom");
-        page++;
-        fetchDataBlog();
-    }
-}, 100 );
+if (document.querySelector("#blog_template")) {
+    setInterval(function () {
+        if (bottomVisible() && lookingForData === false) {
+//            console.log("We have reached the bottom");
+            page++;
+            fetchDataBlog();
+        }
+    }, 100);
+}
 
-
-function bottomVisible() { 
+function bottomVisible() {
     //looking for bottom page
     const scrollY = window.scrollY;
     const visible = document.documentElement.clientHeight;
