@@ -78,7 +78,7 @@ function fetchDataBlog() {
 }
 
 function showDataBlog(data) {
-//    console.log(data);
+    //    console.log(data);
     lookingForData = false;
     data.forEach(showSinglePostBlog);
 }
@@ -97,6 +97,7 @@ function showSinglePostBlog(aPost) {
         } else { // no img
             clone.querySelector(".blog_img").remove();
         }
+        clone.querySelector(".blog_subpage_a").href = "subpage_blog.html?id=" + aPost.id;
 
         let section = document.querySelector("#blog");
         section.appendChild(clone);
@@ -107,7 +108,7 @@ fetchDataBlog();
 if (document.querySelector("#blog_template")) {
     setInterval(function () {
         if (bottomVisible() && lookingForData === false) {
-//            console.log("We have reached the bottom");
+            //            console.log("We have reached the bottom");
             page++;
             fetchDataBlog();
         }
@@ -121,4 +122,21 @@ function bottomVisible() {
     const pageHeight = document.documentElement.scrollHeight;
     const bottomPage = visible + scrollY >= pageHeight;
     return bottomPage || pageHeight < visible;
+}
+
+//Subpage
+let urlParams = new URLSearchParams(window.location.search);
+let id = urlParams.get("id");
+
+if (document.querySelector("#subpage")) {
+
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/blog/" + id)
+        .then(e => e.json() )
+        .then(showSinglePostSubpage)
+
+    function showSinglePostSubpage(aPost) {
+        console.log(aPost);
+        document.querySelector("#subpage h1").textContent = aPost.title.rendered;
+        document.querySelector("#subpage p").innerHTML = aPost.content.rendered;
+    }
 }
