@@ -97,7 +97,7 @@ function showSinglePostBlog(aPost) {
             descp = descp + "...";
         }
         clone.querySelector(".blog_p").innerHTML = descp;
-        
+
         if (aPost._embedded["wp:featuredmedia"]) { //img is there
             clone.querySelector(".blog_img").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
         } else { // no img
@@ -162,15 +162,49 @@ function showDataSeriesGallery(data) {
 function showSinglePostSeriesGallery(aPost) {
     if (document.querySelector("#seriesPage_template")) {
         console.log(aPost.title.rendered);
-        let template = document.querySelector("#seriesPage_template");
-        let clone = template.cloneNode(true);
+        console.log(aPost)
+        let template = document.querySelector("#seriesPage_template").content;
+        let cloneTest = template.cloneNode(true);
+        
+        console.log(cloneTest);
+        
+        //console.log(cloneTest.querySelector(".seriesPage_p").innerHTML)
+        
 
 
-        clone.querySelector(".seriesPage_title").textContent = aPost.title.rendered;
-        clone.querySelector(".seriesPage_p").innerHTML = aPost.content.rendered;
+        cloneTest.querySelector(".seriesPage_title").textContent = aPost.title.rendered;
+        //clone.querySelector(".seriesPage_p").innerHTML = aPost.content.rendered;
 
         let section = document.querySelector("#seriesPage");
-        section.appendChild(clone);
+        section.appendChild(cloneTest);
     }
 }
 fetchDataSeriesGallery();
+
+
+//Gallery1 Page
+function fetchDataSec1() {
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/about?_embed")
+        .then(e => e.json())
+        .then(showDataSec1)
+}
+
+
+function showDataSec1(data) {
+    //    console.log(data);
+    data.forEach(showSinglePostSec1)
+}
+
+function showSinglePostSec1(aPost) {
+    //    console.log(aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
+    if (document.querySelector("#sec1_template")) {
+        let template = document.querySelector("#sec1_template").content;
+        let clone = template.cloneNode(true);
+        clone.querySelector(".about_title").textContent = aPost.title.rendered;
+        clone.querySelector(".about_p").innerHTML = aPost.content.rendered;
+
+        let section = document.querySelector("#sec1");
+        section.appendChild(clone);
+    }
+}
+fetchDataSec1();
