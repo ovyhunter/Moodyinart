@@ -14,8 +14,9 @@ body {
     margin-bottom: -100px;
 }
 
-.about_title, .about_p, .contact_title, .contact_p, .blog_title, .blog_p, .blog_date{
+.about_title, .about_p, .contact_title, .contact_p, .blog_title, .blog_p, .blog_date, .wrapper-title, .caption{
     color: white;
+    font-family: 'Gruppo', cursive;
 }
 
 
@@ -25,13 +26,23 @@ body {
 @media screen and (min-width: 992px) {
     
     .menu_checkbox {
-        display: none; /* hidding the chechbox */
+        display: none; /* hiding the checkbox */
     }
 
     nav {
         margin-top: 1%;
         margin-right: 1%;
     }
+    
+    #menu{
+        font-family: 'Gruppo', cursive;
+        letter-spacing: .25em;
+    }
+    
+    #menu li{
+        margin-right: .6em;
+    }
+
 
     #menu a {
         text-decoration: none;
@@ -62,13 +73,11 @@ body {
         border-bottom: 2px solid white;
     }
     
+}
     
     .gallery_1 {
         width: 30%;
     }
-}
-
-
 
 @media screen and (max-width: 992px) {
     /* Logo */
@@ -147,6 +156,9 @@ body {
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        font-family: 'Gruppo', cursive;
+        letter-spacing: .25em;
+        font-weight: bold;
     }
 
     #menu li {
@@ -217,6 +229,10 @@ header h2 {
     padding: 1%;
     display: flex;
     flex-direction: column;
+    margin: 1%;
+    width: 100%;
+    height: auto;
+    
 }
 
 .video-wrapper {
@@ -252,6 +268,10 @@ footer {
     display: flex;
     justify-content: center;
     margin: 2em;
+}
+
+@media screen and (min-width: 992px){
+    
 }
 
 /* About */
@@ -384,6 +404,10 @@ footer {
     align-self: flex-end;
 }
 
+.caption{
+    font-size: 1.5em;
+}
+
 /* Gallery 3 */
 
 .gal3-container{
@@ -415,14 +439,17 @@ figure {
 	margin: 0;
 	padding: 0;
 	color: white;
-	font-size: 1.8em;
+	font-size: 1.7em;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
-	opacity: 1;
+	opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: 'Gruppo', cursive;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
 }
 
 /* Opacity effect - source: Codepen
@@ -440,4 +467,9 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 
 .gal3-container figure:hover img {
 	opacity: .5;
+}
+
+.gal3-container figure:hover span{
+    opacity: 1;
+    z-index: 1;
 }
