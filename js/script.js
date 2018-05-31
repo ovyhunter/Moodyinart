@@ -89,9 +89,15 @@ function showSinglePostBlog(aPost) {
         let template = document.querySelector("#blog_template").content;
         let clone = template.cloneNode(true);
         clone.querySelector(".blog_title").textContent = aPost.title.rendered;
-        clone.querySelector(".blog_p").innerHTML = aPost.content.rendered;
         clone.querySelector(".blog_date").textContent = aPost.acf.date;
 
+        let descp = aPost.content.rendered;
+        if (descp.length > 10) {
+            descp = descp.substring(0, 10);
+            descp = descp + "...";
+        }
+        clone.querySelector(".blog_p").innerHTML = descp;
+        
         if (aPost._embedded["wp:featuredmedia"]) { //img is there
             clone.querySelector(".blog_img").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
         } else { // no img
@@ -131,7 +137,7 @@ let id = urlParams.get("id");
 if (document.querySelector("#subpage")) {
 
     fetch("http://www.paulchelaru.com/wp-json/wp/v2/blog/" + id)
-        .then(e => e.json() )
+        .then(e => e.json())
         .then(showSinglePostSubpage)
 
     function showSinglePostSubpage(aPost) {
@@ -140,3 +146,47 @@ if (document.querySelector("#subpage")) {
         document.querySelector("#subpage p").innerHTML = aPost.content.rendered;
     }
 }
+
+<<<<<<< HEAD
+//Arrow To
+
+
+var arrowToTop=document.querySelector("#arrowTo");
+arrowToTop.addEventListener('click', function(){
+    var element = document.getElementById("navbar-id");
+    element.scrollIntoView({
+        alignToTop: true,
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
+=======
+//Gallery 3 Page
+function fetchDataSeriesGallery() {
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/series_gallery?_embed")
+        .then(e => e.json())
+        .then(showDataSeriesGallery)
+}
+
+function showDataSeriesGallery(data) {
+    console.log(data);
+    data.forEach(showSinglePostSeriesGallery);
+}
+
+function showSinglePostSeriesGallery(aPost) {
+    if (document.querySelector("#seriesPage_template")) {
+        console.log(aPost.title.rendered);
+        let template = document.querySelector("#seriesPage_template");
+        let clone = template.cloneNode(true);
+
+
+        clone.querySelector(".seriesPage_title").textContent = aPost.title.rendered;
+        clone.querySelector(".seriesPage_p").innerHTML = aPost.content.rendered;
+
+        let section = document.querySelector("#seriesPage");
+        section.appendChild(clone);
+    }
+}
+fetchDataSeriesGallery();
+>>>>>>> 488591a0157b9abefa136a1b80b42d9eee8c3136
