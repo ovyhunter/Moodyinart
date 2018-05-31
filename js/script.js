@@ -147,7 +147,7 @@ if (document.querySelector("#subpage")) {
     }
 }
 
-<<<<<<< HEAD
+
 //Arrow To
 
 
@@ -161,7 +161,6 @@ arrowToTop.addEventListener('click', function(){
     });
 });
 
-=======
 //Gallery 3 Page
 function fetchDataSeriesGallery() {
     fetch("http://www.paulchelaru.com/wp-json/wp/v2/series_gallery?_embed")
@@ -188,5 +187,5 @@ function showSinglePostSeriesGallery(aPost) {
         section.appendChild(clone);
     }
 }
+
 fetchDataSeriesGallery();
->>>>>>> 488591a0157b9abefa136a1b80b42d9eee8c3136
