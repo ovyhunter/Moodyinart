@@ -147,6 +147,20 @@ if (document.querySelector("#subpage")) {
     }
 }
 
+
+//Arrow To
+
+
+var arrowToTop=document.querySelector("#arrowTo");
+arrowToTop.addEventListener('click', function(){
+    var element = document.getElementById("navbar-id");
+    element.scrollIntoView({
+        alignToTop: true,
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
 //Gallery 3 Page
 function fetchDataSeriesGallery() {
     fetch("http://www.paulchelaru.com/wp-json/wp/v2/series_gallery?_embed")
@@ -179,4 +193,32 @@ function showSinglePostSeriesGallery(aPost) {
         section.appendChild(cloneTest);
     }
 }
+fetchDataSeriesGallery();
+
+//Gallery1 Page
+function fetchDataSec1() {
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/about?_embed")
+        .then(e => e.json())
+        .then(showDataSec1)
+}
+
+
+function showDataSec1(data) {
+    //    console.log(data);
+    data.forEach(showSinglePostSec1)
+}
+
+function showSinglePostSec1(aPost) {
+    //    console.log(aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
+    if (document.querySelector("#sec1_template")) {
+        let template = document.querySelector("#sec1_template").content;
+        let clone = template.cloneNode(true);
+        clone.querySelector(".about_title").textContent = aPost.title.rendered;
+        clone.querySelector(".about_p").innerHTML = aPost.content.rendered;
+
+        let section = document.querySelector("#sec1");
+        section.appendChild(clone);
+    }
+}
+
 fetchDataSeriesGallery();
