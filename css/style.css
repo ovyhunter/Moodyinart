@@ -242,7 +242,7 @@ footer {
 
 .gal3-container{
     margin: .5em;
-    padding: 2em;
+    padding: 1em;
 }
 
 figure {
@@ -252,13 +252,13 @@ figure {
 }
 
 .gal3-container img{
-    width: 500px;
-    height: 300px;
+    width: 25vw;
+    height: auto;
     border: 1px solid white;
 }
 
 .gal3-container div{
-    margin: 1.5em;
+    margin: 1em;
     position: relative;
 }
 
