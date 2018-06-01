@@ -211,8 +211,7 @@ if(document.querySelector(".slideShow")) {
                 }
                 myIndex++;
                 if (myIndex > x.length) {myIndex = 1}    
-                x[myIndex-1].style.display = "block";  
-                setTimeout(carousel, 2000); // Change image every 2 seconds
+                x[myIndex-1].style.display = "block";
             }
 }
 // Gallery 2 Page
@@ -233,8 +232,9 @@ function showSinglePostPpGallery(aPost) {
         let template = document.querySelector("#PpPage_template").content;
         let clone = template.cloneNode(true);
 
-        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
-        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
+        //clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
+        
+        clone.querySelector("figure").style.backgroundImage = "url("+aPost.acf.image +")";
         
         let section = document.querySelector("#PpPage");
         section.appendChild(clone);
