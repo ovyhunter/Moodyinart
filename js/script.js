@@ -88,12 +88,13 @@ function showSinglePostBlog(aPost) {
     if (document.querySelector("#blog_template")) {
         let template = document.querySelector("#blog_template").content;
         let clone = template.cloneNode(true);
+        clone.querySelector(".blog_img").setAttribute("src", aPost.acf.image);
         clone.querySelector(".blog_title").textContent = aPost.title.rendered;
         clone.querySelector(".blog_date").textContent = aPost.acf.date;
 
         let descp = aPost.content.rendered;
-        if (descp.length > 10) {
-            descp = descp.substring(0, 10);
+        if (descp.length > 550) {
+            descp = descp.substring(0, 550);
             descp = descp + "...";
         }
         clone.querySelector(".blog_p").innerHTML = descp;
