@@ -239,8 +239,8 @@ function showSinglePostPpGallery(aPost) {
         
         clone.querySelector("figure").style.backgroundImage = "url("+aPost.acf.image +")";
         
-        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
-        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
+//        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
+//        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
 
         let section = document.querySelector("#PpPage");
         section.appendChild(clone);
