@@ -78,7 +78,6 @@ function fetchDataBlog() {
 }
 
 function showDataBlog(data) {
-    //    console.log(data);
     lookingForData = false;
     data.forEach(showSinglePostBlog);
 }
@@ -88,22 +87,23 @@ function showSinglePostBlog(aPost) {
     if (document.querySelector("#blog_template")) {
         let template = document.querySelector("#blog_template").content;
         let clone = template.cloneNode(true);
-        clone.querySelector(".blog_img").setAttribute("src", aPost.acf.image);
+        console.log(aPost.acf.image.url);
+        if (aPost.acf.image.url) { //img is there
+            clone.querySelector(".blog_img").setAttribute("src", aPost.acf.image.url);
+        } else { // no img
+            clone.querySelector(".blog_img").remove();
+        }
         clone.querySelector(".blog_title").textContent = aPost.title.rendered;
         clone.querySelector(".blog_date").textContent = aPost.acf.date;
 
         let descp = aPost.content.rendered;
-        if (descp.length > 550) {
-            descp = descp.substring(0, 550);
+        if (descp.length > 50) {
+            descp = descp.substring(0, 50);
             descp = descp + "...";
         }
         clone.querySelector(".blog_p").innerHTML = descp;
 
-        if (aPost._embedded["wp:featuredmedia"]) { //img is there
-            clone.querySelector(".blog_img").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
-        } else { // no img
-            clone.querySelector(".blog_img").remove();
-        }
+        
         clone.querySelector(".blog_subpage_a").href = "subpage_blog.html?id=" + aPost.id;
 
         let section = document.querySelector("#blog");
