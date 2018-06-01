@@ -10,8 +10,8 @@ body {
 .logo {
     width: 8%;
     float: left;
-    margin-left: 1%;
-    margin-bottom: -100px;
+    position: absolute;
+    left: 3em;
 }
 
 .about_title, .about_p, .contact_title, .contact_p, .blog_title, .blog_p, .blog_date, .wrapper-title, .caption{
@@ -241,11 +241,8 @@ footer {
 /* Gallery 3 */
 
 .gal3-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 1em;
-    padding: 3em;
+    margin: .5em;
+    padding: 2em;
 }
 
 figure {
@@ -280,6 +277,12 @@ figure {
     font-family: 'Gruppo', cursive;
     font-weight: bold;
     text-shadow: 2px 2px 4px black;
+}
+
+#seriesPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Opacity effect - source: Codepen
