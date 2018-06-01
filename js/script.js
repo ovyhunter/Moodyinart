@@ -103,7 +103,7 @@ function showSinglePostBlog(aPost) {
         }
         clone.querySelector(".blog_p").innerHTML = descp;
 
-        
+
         clone.querySelector(".blog_subpage_a").href = "subpage_blog.html?id=" + aPost.id;
 
         let section = document.querySelector("#blog");
@@ -177,44 +177,27 @@ function showDataSeriesGallery(data) {
 
 function showSinglePostSeriesGallery(aPost) {
     if (document.querySelector("#seriesPage_template")) {
-        console.log( aPost.acf.image);
+        console.log(aPost.acf.image);
         let template = document.querySelector("#seriesPage_template").content;
         let clone = template.cloneNode(true);
 
         clone.querySelector(".seriesPage_img").setAttribute("src", aPost.acf.image);
         clone.querySelector(".seriesPage_title").innerHTML = aPost.title.rendered;
-        
-//        if (aPost._embedded["wp:featuredmedia"]) { //img is there
-//            clone.querySelector(".img").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
-//        } else { // no img
-//            clone.querySelector(".img").remove();
-//        }
+
+        //        if (aPost._embedded["wp:featuredmedia"]) { //img is there
+        //            clone.querySelector(".img").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
+        //        } else { // no img
+        //            clone.querySelector(".img").remove();
+        //        }
 
         let section = document.querySelector("#seriesPage");
         section.appendChild(clone);
+
     }
+
 }
 fetchDataSeriesGallery();
 
-// Slideshow
-
-var myIndex = 0;
-
-if(document.querySelector(".slideShow")) {
-            carousel();
-
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                   x[i].style.display = "none";  
-                }
-                myIndex++;
-                if (myIndex > x.length) {myIndex = 1}    
-                x[myIndex-1].style.display = "block";  
-                setTimeout(carousel, 2000); // Change image every 2 seconds
-            }
-}
 // Gallery 2 Page
 function fetchDataPpGallery() {
     fetch("http://www.paulchelaru.com/wp-json/wp/v2/people_portraits?_embed")
@@ -229,13 +212,13 @@ function showDataPpGallery(data) {
 
 function showSinglePostPpGallery(aPost) {
     if (document.querySelector("#PpPage_template")) {
-        console.log( aPost.acf.image);
+        console.log(aPost.acf.image);
         let template = document.querySelector("#PpPage_template").content;
         let clone = template.cloneNode(true);
 
         clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
         clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
-        
+
         let section = document.querySelector("#PpPage");
         section.appendChild(clone);
     }
