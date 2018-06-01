@@ -199,6 +199,8 @@ fetchDataSeriesGallery();
 // Slideshow
 
 var myIndex = 0;
+
+if(document.querySelector(".slideShow")) {
             carousel();
 
             function carousel() {
@@ -212,6 +214,7 @@ var myIndex = 0;
                 x[myIndex-1].style.display = "block";  
                 setTimeout(carousel, 2000); // Change image every 2 seconds
             }
+}
 // Gallery 2 Page
 function fetchDataPpGallery() {
     fetch("http://www.paulchelaru.com/wp-json/wp/v2/people_portraits?_embed")
