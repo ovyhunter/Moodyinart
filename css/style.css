@@ -309,6 +309,16 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     z-index: 1;
 }
 
+.slideShow{
+    display: block;
+    
+}
+
+.mySlides{
+    max-width: 50vw;
+    height: auto;
+}
+
 @media screen and (min-width: 992px) {
     
     .menu_checkbox {
