@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -334,33 +335,61 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     margin-top: 5em;
 }
 
-
-
 .gal2-container div{
     margin: .2em;
     position: relative;
-}
-
-.gal2-container figure img {
-	opacity: 1;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-
-.gal2-container figure:hover img {
-	opacity: .5;
-}
-
-.gal2-container figure:hover h1 {
-    opacity: 1;
-    z-index: 1;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .figures{
-    width: 30vw;
-    height: 50vh;
+    width: 20vw;
+    height: 10vw;
     background-size: cover;
 }
+
+/* Testing around */
+
+.flexbox-masonry{
+    display: flex;
+    overflow: hidden;
+    width: 90vw;
+    max-height: 170vh;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-flow: column wrap;
+}
+
+.flexbox-masonry img{
+    max-width: 100%;
+    display: inline-block;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.w-container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-item{
+    flex: 0 0 auto;
+    width: 33.3%;
+}
+
+
 
 @media screen and (min-width: 992px) {
     
