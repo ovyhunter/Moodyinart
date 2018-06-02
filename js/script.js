@@ -233,12 +233,13 @@ function showSinglePostPpGallery(aPost) {
         let template = document.querySelector("#PpPage_template").content;
         let clone = template.cloneNode(true);
 
-        //clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
-        
-        clone.querySelector("figure").style.backgroundImage = "url("+aPost.acf.image +")";
-        
 //        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
-//        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
+        
+//        clone.querySelector("figure").style.backgroundImage = "url("+aPost.acf.image +")";
+        
+        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
+        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
+        clone.querySelector(".PpPage_p").innerHTML = aPost.content.rendered;
 
         let section = document.querySelector("#PpPage");
         section.appendChild(clone);
@@ -246,3 +247,33 @@ function showSinglePostPpGallery(aPost) {
 }
 fetchDataPpGallery();
 
+//Gallery 1 Page
+function fetchDataSpGallery() {
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/self_portraits?_embed")
+        .then(e => e.json())
+        .then(showDataSpGallery)
+}
+
+function showDataSpGallery(data) {
+//    console.log(data);
+    data.forEach(showSinglePostSpGallery);
+}
+
+function showSinglePostSpGallery(aPost) {
+    if (document.querySelector("#SpPage_template")) {
+        let template = document.querySelector("#SpPage_template").content;
+        let clone = template.cloneNode(true);
+
+//        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
+        
+//        clone.querySelector("figure").style.backgroundImage = "url("+aPost.acf.image +")";
+        
+        clone.querySelector(".SpPage_img").setAttribute("src", aPost.acf.image);
+        clone.querySelector(".SpPage_title").innerHTML = aPost.title.rendered;
+        clone.querySelector(".SpPage_p").innerHTML = aPost.content.rendered;
+        
+        let section = document.querySelector("#SpPage");
+        section.appendChild(clone);
+    }
+}
+fetchDataSpGallery();
