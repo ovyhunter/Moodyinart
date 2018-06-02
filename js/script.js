@@ -177,12 +177,13 @@ function showDataSeriesGallery(data) {
 
 function showSinglePostSeriesGallery(aPost) {
     if (document.querySelector("#seriesPage_template")) {
-        console.log(aPost.acf.image);
+//        console.log(aPost.acf.image);
         let template = document.querySelector("#seriesPage_template").content;
         let clone = template.cloneNode(true);
 
         clone.querySelector(".seriesPage_img").setAttribute("src", aPost.acf.image);
         clone.querySelector(".seriesPage_title").innerHTML = aPost.title.rendered;
+        clone.querySelector(".seriesPage_a").href = "subpageSeries.html?id=" + aPost.id;
 
         //        if (aPost._embedded["wp:featuredmedia"]) { //img is there
         //            clone.querySelector(".img").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
@@ -198,24 +199,21 @@ function showSinglePostSeriesGallery(aPost) {
 }
 fetchDataSeriesGallery();
 
-// Slideshow
+//Subpage Gallery 3 Page
 
-var myIndex = 0;
+if (document.querySelector("#subpageSeries")) {
 
-if(document.querySelector(".slideShow")) {
-            carousel();
-
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                   x[i].style.display = "none";  
-                }
-                myIndex++;
-                if (myIndex > x.length) {myIndex = 1}    
-                x[myIndex-1].style.display = "block";
-            }
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/series_gallery/" + id)
+        .then(e => e.json())
+        .then(showSinglePostSubpageSeries)
+    console.log(id);
+    function showSinglePostSubpageSeries(aPost) {
+        console.log(aPost);
+        document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
+        document.querySelector("#subpageSeries p").innerHTML = aPost.content.rendered;
+    }
 }
+
 
 // Gallery 2 Page
 function fetchDataPpGallery() {
@@ -225,7 +223,7 @@ function fetchDataPpGallery() {
 }
 
 function showDataPpGallery(data) {
-    console.log(data);
+//    console.log(data);
     data.forEach(showSinglePostPpGallery);
 }
 
@@ -247,3 +245,4 @@ function showSinglePostPpGallery(aPost) {
     }
 }
 fetchDataPpGallery();
+
