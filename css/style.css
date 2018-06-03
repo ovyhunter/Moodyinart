@@ -26,12 +26,6 @@ h1, h2{
     font-family: 'Gruppo', cursive;
 }
 
-#subpageSeries figure div{
-/*    display: flex;*/
-    all: unset;
-    
-}
-
 /* Menu */
     
     .gallery_1 {
@@ -57,20 +51,42 @@ header {
     max-width: 100%;
     height: auto;
     margin-top: 15vh;
-    
 }
 
 .video-wrapper {
-    width: 90vw;
-    height: 100vh;
+    width: 60vw;
+    height: 80vh;
     display: flex;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
     align-self: center;
 }
 
 .video-wrapper iframe {
     width: 100%;
+}
+
+.take-me{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-family: 'Gruppo', cursive;
+    font-size: 2em;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: darkgray;
+}
+
+.take-me:hover{
+    color: black;
+    text-decoration: none;
+    background-color: white;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.3) 30%, #000 50%, rgba(0,0,0,.3) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 1s infinite;
 }
 
 footer {
@@ -87,6 +103,8 @@ footer {
     margin: 0;
     padding: 0.1em 0.7em 0.1em 0.7em;
     text-decoration: none;
+    font-size: 1.3em;
+    border-radius: .5em;
 }
 
 #insta-button {
@@ -475,12 +493,9 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 
 #subpageSeries p , #subpageSeries img{
     margin-bottom: 1vh;
-    width: 100%
 }
 
 .gallery-icon img{
-    width: 100%;
-    height: 20%;
 }
 
 .gallery-item{
@@ -489,7 +504,7 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 
 #gallery-1{
     display: flex;
-    width: 90vw;
+/*    width: 90vw;*/
     height: 300vh;
     margin-left: auto;
     margin-right: auto;
@@ -609,11 +624,11 @@ figure {
 /*Actual editing gallery*/
 
 #subpageSeries{
-    display: flex;
+/*    display: flex;*/
 }
 
-#subpageSeries p {
-    display: flex;
+#subpageSeries figure {
+/*    display: flex;*/
 }
 
 #subpageSeries p , #subpageSeries img{
@@ -631,19 +646,24 @@ figure {
 .subpageSeries-container div{
     margin: .2em;
     position: relative;
+    display: grid;
 }
 
-#subpageSeries p{
+#gallery-1{
+    display: block;
+}
+
+#subpageSeries figure{
     padding: 1rem;
 /*    height: 100%;*/
     
 }
 
+#subpageSeries figure div{
+    
+}
+
 #subpageSeries img {
-/*
-    width: 25vw;
-    height: 100%;
-    */
     padding: 1rem;
 
 }
