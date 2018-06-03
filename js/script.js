@@ -49,12 +49,6 @@ function showSinglePostContact(aPost) {
         clone.querySelector(".contact_title").textContent = aPost.title.rendered;
         clone.querySelector(".contact_p").innerHTML = aPost.content.rendered;
 
-        if (aPost._embedded["wp:featuredmedia"]) { //img is there
-            clone.querySelector(".contact_img").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
-        } else { // no img
-            clone.querySelector(".contact_img").remove();
-        }
-
         let section = document.querySelector("#contact");
         section.appendChild(clone);
     }
