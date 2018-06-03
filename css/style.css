@@ -12,10 +12,6 @@ body {
     width:100%;
 }
 
-footer{
-    padding-bottom:30px;
-    font-size:1.4em;
-}
 
 p{
     font-size: 1.2em;
@@ -52,9 +48,12 @@ header h2{
 /*About*/
 
 #about{
-    margin-left:15%;
-    margin-right:15%;
-    margin-top:5%;
+    
+}
+
+.about_p{
+    margin-top:40px;
+    margin-bottom:40px;
 }
 
 /* Menu */
@@ -127,9 +126,14 @@ header {
 
 footer {
     color: white;
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     margin-top: 2em;
+    padding-bottom:30px;
+    font-weight: 100;
+    
+    font-family: 'Lato', sans-serif;
+    
 }
 
 #insta-link {
@@ -1158,4 +1162,17 @@ header h2{
 .blog_title{
    text-transform: uppercase;
     font-size:2em
+}
+
+/*about mobile*/
+
+.about_article {
+    margin-top: 2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about_article p{
+    font-size:1.1em;
 }
