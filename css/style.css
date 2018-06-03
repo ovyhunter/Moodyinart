@@ -338,23 +338,18 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 
 /* Testing around */
 
-.flexbox-masonry{
+.flexbox-masonry {
     display: flex;
-    overflow: hidden;
     width: 90vw;
-    max-height: 470vh;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
+    height: 350vh;
+    margin: auto;
+    position: relative;
     flex-flow: column wrap;
 }
 
 .flexbox-masonry img{
-    max-width: 100%;
+    width: 30%;
+    height: auto;
     display: inline-block;
     margin-bottom: 1em;
     margin-right: 1em;
@@ -413,41 +408,13 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 
 /*Actual editing gallery*/
 
-.flexbox-masonry{
-    display: flex !important;
-    overflow-x: hidden !important;
-    width: 90vw !important;
-    max-height: 200vh !important;
-    margin-top: 20px !important;
-    margin-bottom: 50px !important;
-    flex-direction: row !important;
-    justify-content: flex-start !important;
-    flex-wrap: wrap !important;
-    align-items: flex-start !important;
-    align-content: flex-start !important;
-    flex-flow: column wrap !important;
+#subpageSeries{
+    display: flex;
 }
 
-.flexbox-masonry p , .flexbox-masonry img{
-    max-width: 100% !important; 
-    display: inline-block !important;
-    margin-bottom: 1em !important;
-    margin-right: 1em !important;
-    flex: 0 0 auto !important;
-    width: 100% !important;
+#subpageSeries p , #subpageSeries img{
+    margin-bottom: 1vh;
 }
-
-#subpageSeries p img{
-    width: 33%;
-    height: auto;
-}
-
-#subpageSeries p img{
-    width: 10%;
-    height: auto;
-}
-
-/* Contact form */
 
 /* Contact form */
 
