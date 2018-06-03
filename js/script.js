@@ -99,7 +99,7 @@ function showSinglePostBlog(aPost) {
         let descp = aPost.content.rendered;
         if (descp.length > 143) {
             descp = descp.substring(0, 143);
-//            descp = descp + "...";
+            //            descp = descp + "...";
         }
         descp = descp + "...";
         clone.querySelector(".blog_p").innerHTML = descp;
@@ -147,7 +147,7 @@ if (document.querySelector("#subpage")) {
         document.querySelector("#subpage h1").textContent = aPost.title.rendered;
         document.querySelector("#subpage p").innerHTML = aPost.content.rendered;
     }
-    
+
 }
 
 
@@ -179,7 +179,7 @@ function showDataSeriesGallery(data) {
 
 function showSinglePostSeriesGallery(aPost) {
     if (document.querySelector("#seriesPage_template")) {
-//        console.log(aPost.acf.image);
+        //        console.log(aPost.acf.image);
         let template = document.querySelector("#seriesPage_template").content;
         let clone = template.cloneNode(true);
 
@@ -209,13 +209,12 @@ if (document.querySelector("#subpageSeries")) {
         .then(e => e.json())
         .then(showSinglePostSubpageSeries)
     console.log(id);
+
     function showSinglePostSubpageSeries(aPost) {
         console.log(aPost);
-//        document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
+        document.querySelector(".subpage_h1").textContent = aPost.title.rendered;
         document.querySelector("#subpageSeries div").innerHTML = aPost.content.rendered;
     }
-    
-//        documnet.querySelector("#subpageSeries p").remove();
 }
 
 
@@ -228,7 +227,7 @@ function fetchDataPpGallery() {
 }
 
 function showDataPpGallery(data) {
-//    console.log(data);
+    //    console.log(data);
     data.forEach(showSinglePostPpGallery);
 }
 
@@ -239,15 +238,14 @@ function showSinglePostPpGallery(aPost) {
         let clone = template.cloneNode(true);
 
         //clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
-        
-        clone.querySelector("figure").style.backgroundImage = "url("+aPost.acf.image +")";
-        
-//        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
-//        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
+
+        clone.querySelector("figure").style.backgroundImage = "url(" + aPost.acf.image + ")";
+
+        //        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
+        //        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
 
         let section = document.querySelector("#PpPage");
         section.appendChild(clone);
     }
 }
 fetchDataPpGallery();
-

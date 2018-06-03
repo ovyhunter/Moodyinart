@@ -410,19 +410,6 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     font-size: initial
   }
 
-/*Actual editing gallery*/
-
-#subpageSeries{
-    display: flex;
-}
-
-#subpageSeries p {
-    display: flex;
-}
-
-#subpageSeries p , #subpageSeries img{
-    margin-bottom: 1vh;
-}
 
 /* Contact form */
 
@@ -531,19 +518,31 @@ figure {
     float: left;
 }
 
-/*Subpage Serie*/
+/*Actual editing gallery*/
+
+#subpageSeries{
+    display: flex;
+}
+
+#subpageSeries p {
+    display: flex;
+}
+
+#subpageSeries p , #subpageSeries img{
+    margin-bottom: 1vh;
+}
+
 .subpageSeries-container{
     margin: .5em;
     padding: 1em;
-    margin-top: 5em;
 }
 .subpageSeries-container img{
-    border: 1px solid white;
+/*    border: 1px solid white;*/
 }
 
 .subpageSeries-container div{
     margin: .2em;
-/*    position: relative;*/
+    position: relative;
 }
 
 #subpageSeries p{
@@ -553,8 +552,12 @@ figure {
 }
 
 #subpageSeries img {
-    width: 50vw;
+/*
+    width: 25vw;
     height: 100%;
+    */
+    padding: 1rem;
+
 }
 
 @media screen and (max-width: 575px) {
