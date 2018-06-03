@@ -340,31 +340,13 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 
 .flexbox-masonry{
     display: flex;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    overflow: hiden;
-    width: 90vw;
-    max-height: 470vh;
-=======
     overflow: hidden;
     width: 90vw;
-    max-height: 170vh;
->>>>>>> parent of 8af2b92... contact form + portfolio + masonry work
+    max-height: 470vh;
     margin-top: 20px;
     margin-bottom: 50px;
-    flex-direction: row;
-    justify-content: flex-start;
-<<<<<<< HEAD
-=======
-    overflow: hidde;
-    width: 100vw;
-    max-height: 100vh;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
     flex-direction: column;
->>>>>>> parent of 210f9d5... Merge branch 'master' of https://github.com/ovyhunter/Moodyinart
-=======
->>>>>>> parent of 8af2b92... contact form + portfolio + masonry work
+    justify-content: flex-start;
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
@@ -594,7 +576,6 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     letter-spacing: 3px;
     font-family: 'Gruppo', cursive;
 }
-<<<<<<< HEAD
 }
 
 /* Blog */
@@ -608,6 +589,4 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     height: auto;
 }
 
-=======
-}
->>>>>>> parent of 210f9d5... Merge branch 'master' of https://github.com/ovyhunter/Moodyinart
+
