@@ -603,8 +603,7 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 /* Contact form */
 
 form{
-    margin-top: 10vh;
-    margin-left: 3vh;
+    margin-top: 50px;
 }
 
 .form-wrapper{
@@ -615,7 +614,7 @@ form{
 input[type=text],
 input[type=email],
 textarea{
-    width: 60%;
+    width: 100%;
     margin-bottom: 1vh;
     padding: 0.3vw;
     border: 0.2vh;
@@ -630,13 +629,18 @@ input{
     border: 0.2vh;
     border-style: solid;
     border-color: black;
-    max-width: 30vw;
+    max-width: 40vw;
+    padding-left:5px;
 }
 
 form h2{
     font-family: 'Lato', sans-serif;
     color: white;
-    font-size: 2.5em;
+    font-size: 2em;
+}
+
+.contact_title{
+    text-transform: uppercase;
 }
 
 #send-button{
@@ -651,6 +655,8 @@ form h2{
     border: 1px solid white;
     padding: 0em .3em;
     box-shadow: 1px 1px 2px grey;
+    text-transform: uppercase;
+    max-width: 20vw;
 }
 
 #send-button:hover {
@@ -1202,6 +1208,75 @@ header h2{
     font-size:1.1em;
 }
     
-form{
-   width:100%;     
-    }
+/*Cotact mobile*/
+input[type=text],
+input[type=email],
+textarea{
+    width: 100%;
+    margin-bottom: 1vh;
+    padding: 0.3vw;
+    border: 0.2vh;
+    border-style: solid;
+    border-color: black;
+    font-family: serif;
+    font-size: 1em;
+}
+    
+input{
+    font-family: serif;
+    font-size: 1.3em;
+    border: 0.2vh;
+    border-style: solid;
+    border-color: black;
+    max-width: 30vw;
+    min-height:2em;
+}
+
+form h2{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 1.8em;
+}
+
+#send-button{
+    display: flex;
+    margin-bottom: 3vh;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif; 
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 0em .3em;
+    box-shadow: 1px 1px 2px grey;
+    text-transform: uppercase;
+    max-width:30vw;
+}
+
+.contact_title{
+    margin-top:2em;
+    margin-bottom:1em;
+    font-size: 2em;
+}
+
+textarea{
+    width: 100%;
+    margin-bottom: 1vh;
+    padding: 0.3vw;
+    border: 0.2vh;
+    border-style: solid;
+    border-color: black;
+    font-family: serif;
+    font-size: 1.em;
+    padding-left:5px;
+}
+input{
+    font-family: serif;
+    font-size: 1.3em;
+    border: 0.2vh;
+    border-style: solid;
+    border-color: black;
+    max-width: 100vw;
+    padding-left:5px;
+}
