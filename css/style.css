@@ -8,6 +8,16 @@ body {
     background-color: black;
 }
 
+.blog_img{
+    width:100%;
+}
+
+
+p{
+    font-size: 1.2em;
+    font-weight: 80;
+}
+
 .logo {
     width: 5%;
     float: left;
@@ -21,17 +31,29 @@ header h1, h2{
     padding-top: 1em;
 }
 header h1{
-    font-size: 3.5em;
-    letter-spacing: .5em;
+    font-size: 3em;
+    letter-spacing: .4em;
 }
 header h2{
-    letter-spacing: .2em;
+    font-size:1.5em;
+    letter-spacing: .3em;
     font-weight: 100;
 }
 
 .about_title, .about_p, .contact_title, .contact_p, .blog_title, .blog_p, .blog_date, .wrapper-title, .caption{
     color: white;
     font-family: 'Lato', sans-serif;
+}
+
+/*About*/
+
+#about{
+    
+}
+
+.about_p{
+    margin-top:40px;
+    margin-bottom:40px;
 }
 
 /* Menu */
@@ -78,14 +100,17 @@ header {
     text-decoration: none;
     color: white;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Lato', sans-serif;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
     margin-bottom: 5vh;
     background-color: black;
-    padding: 0em .4em 0em .4em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left:15px;
+    padding-right:15px;
     border: 1px solid white;
     border-radius: .5em;
 }
@@ -101,9 +126,14 @@ header {
 
 footer {
     color: white;
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     margin-top: 2em;
+    padding-bottom:30px;
+    font-weight: 100;
+    
+    font-family: 'Lato', sans-serif;
+    
 }
 
 #insta-link {
@@ -161,12 +191,16 @@ footer {
     color: white;
 }
 
-.img_about {
-    padding-bottom: 5%;
-    width: 100%;
-    height: auto;
+.about_article {
+    margin-top: 5rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.about_img {
+    width:  100%;
+}
 
 /* Portfolio */
 
@@ -424,6 +458,7 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     font-family: 'Lato', sans-serif;
 }
   .blog_subpage {
+    margin-top: 4rem;
     backface-visibility: hidden;
   position: relative;
   cursor: pointer;
@@ -609,13 +644,24 @@ form h2{
 }
 
 /* Blog */
-.blog_article img, .blog_p {
+.blog_p {
     width: 20vw;
     height: 5vh;
 }
 
+.blog_article img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
 .blog_title{
     width: 36vw;
+    text-transform: uppercase;
+    margin-top:1em;
+    margin-bottom:1em;
+    letter-spacing: 0.05em;
+    font-size:1.8em
 }
 
 .blog_p {
@@ -1092,4 +1138,40 @@ figure {
     border: 1px solid white;
     border-radius: .5em;
 }
+
+header h1{
+    font-size: 2em;
+    letter-spacing: .1em;
+    text-align: center;
+}
+header h2{
+    letter-spacing: .1em;
+    font-weight: 80;
+    font-size: 1em;
+    padding-top:0.5em;
+    text-align: center;
+}
+
+/*Blog mobile*/
+
+.blog_subpage {
+    margin-top: 7rem;
+}
+
+.blog_title{
+   text-transform: uppercase;
+    font-size:2em
+}
+
+/*about mobile*/
+
+.about_article {
+    margin-top: 2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about_article p{
+    font-size:1.1em;
 }

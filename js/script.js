@@ -14,17 +14,13 @@ function showDataAbout(data) {
 function showSinglePostAbout(aPost) {
     //    console.log(aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
     if (document.querySelector("#about_template")) {
+        console.log(aPost);
         let template = document.querySelector("#about_template").content;
         let clone = template.cloneNode(true);
-        clone.querySelector(".about_title").textContent = aPost.title.rendered;
+//        clone.querySelector(".about_title").textContent = aPost.title.rendered;
         clone.querySelector(".about_p").innerHTML = aPost.content.rendered;
-
-        if (aPost._embedded["wp:featuredmedia"]) {
-            clone.querySelector(".about_img").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
-        } else {
-            clone.querySelector(".about_img").remove();
-        }
-
+        clone.querySelector(".about_img").setAttribute("src", aPost.acf.blog_image.url);
+        
         let section = document.querySelector("#about");
         section.appendChild(clone);
     }
