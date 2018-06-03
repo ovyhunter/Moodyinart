@@ -135,7 +135,7 @@ footer {
     background-image: url("../img/self-portraits/PicsArt_04-17-09.40.06.jpg");
 
     /* Set a specific height */
-    height: 300px;
+    height: 80vh;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -167,10 +167,10 @@ footer {
 
 .parallax2 {
     /* The image used */
-    background-image: url("../img/gallery_1/IMG_0600.jpg");
+    background-image: url("../img/series/the_last_elf/IMG_0389.jpg");
 
     /* Set a specific height */
-    height: 300px;
+    height: 80vh;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -202,10 +202,10 @@ footer {
 
 .parallax3 {
     /* The image used */
-    background-image: url("../img/series/the_last_elf/IMG_0389.jpg");
+    background-image: url("../img/gallery_1/IMG_2995.jpg");
 
     /* Set a specific height */
-    height: 300px;
+    height: 80vh;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -331,30 +331,29 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 }
 
 .figures{
-    width: 20vw;
+    width: 2vw;
     height: 10vw;
     background-size: cover;
 }
 
 /* Testing around */
 
-.flexbox-masonry{
+#subpageSeries{
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    overflow: hidden;
-    width: 90vw;
-    max-height: 170vh;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    flex-direction: row;
-    justify-content: flex-start;
+    overflow: hidde;
+    width: 100vw;
+    max-height: 100vh;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
-    flex-flow: column wrap;
 }
 
-.flexbox-masonry img{
-    max-width: 100%;
+#subpageSeries p , #subpageSeries img{
     display: inline-block;
     margin-bottom: 1em;
     margin-right: 1em;
@@ -365,11 +364,106 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     margin-right: auto;
 }
 
-.flex-item{
+#subpageSeries img{
     flex: 0 0 auto;
-    width: 33.3%;
+    max-width: 35%;
+    height: auto;
 }
 
+/*Actual editing gallery*/
+
+.flexbox-masonry[style]{
+    display: flex !important;
+    overflow-x: hidden !important;
+    width: 90vw !important;
+    max-height: 200vh !important;
+    margin-top: 20px !important;
+    margin-bottom: 50px !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    align-content: flex-start !important;
+    flex-flow: column wrap !important;
+}
+
+.flexbox-masonry p , .flexbox-masonry img[style]{
+    max-width: 100% !important; 
+    display: inline-block !important;
+    margin-bottom: 1em !important;
+    margin-right: 1em !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+}
+
+/* Contact form */
+
+form{
+    margin-top: 10vh;
+    margin-left: 3vh;
+}
+
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text],
+input[type=email],
+textarea{
+    width: 60%;
+    margin-bottom: 1vh;
+    padding: 0.3vw;
+    border: 0.2vh;
+    border-style: solid;
+    border-color: black;
+    font-family: serif;
+    font-size: 1.3em;
+}
+input{
+    font-family: serif;
+    font-size: 1.3em;
+    border: 0.2vh;
+    border-style: solid;
+    border-color: black;
+    max-width: 30vw;
+}
+
+form h2{
+    font-family: 'Gruppo', cursive;
+    color: white;
+    font-size: 2.5em;
+}
+
+#send-button{
+    display: flex;
+    margin-bottom: 3vh;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Gruppo', cursive; 
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 0em .3em;
+    box-shadow: 1px 1px 2px grey;
+}
+
+#send-button:hover {
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.3) 30%, #000 50%, rgba(0,0,0,.3) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 1s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
 
 
 @media screen and (min-width: 992px) {
