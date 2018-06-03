@@ -341,13 +341,20 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 .flexbox-masonry{
     display: flex;
 <<<<<<< HEAD
+<<<<<<< HEAD
     overflow: hiden;
     width: 90vw;
     max-height: 470vh;
+=======
+    overflow: hidden;
+    width: 90vw;
+    max-height: 170vh;
+>>>>>>> parent of 8af2b92... contact form + portfolio + masonry work
     margin-top: 20px;
     margin-bottom: 50px;
     flex-direction: row;
     justify-content: flex-start;
+<<<<<<< HEAD
 =======
     overflow: hidde;
     width: 100vw;
@@ -356,6 +363,8 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     margin-bottom: 20vh;
     flex-direction: column;
 >>>>>>> parent of 210f9d5... Merge branch 'master' of https://github.com/ovyhunter/Moodyinart
+=======
+>>>>>>> parent of 8af2b92... contact form + portfolio + masonry work
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
