@@ -339,7 +339,7 @@ figure {
     text-shadow: 2px 2px 4px black;
 }
 
-#seriesPage, #PpPage, #blog, #subpageSeries{
+#seriesPage, #PpPage, #blog, #subpageSeries, #SpPage{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
