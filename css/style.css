@@ -366,11 +366,10 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     max-height: 470vh;
     margin-top: 20px;
     margin-bottom: 50px;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
+    flex-flow: column wrap;
 }
 
 #subpageSeries p , #subpageSeries img{
@@ -380,8 +379,7 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 }
 
 .w-container{
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 13vh;
 }
 
 #subpageSeries img{
@@ -392,7 +390,7 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 
 /*Actual editing gallery*/
 
-.flexbox-masonry[style]{
+.flexbox-masonry{
     display: flex !important;
     overflow-x: hidden !important;
     width: 90vw !important;
@@ -407,13 +405,18 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     flex-flow: column wrap !important;
 }
 
-.flexbox-masonry p , .flexbox-masonry img[style]{
+.flexbox-masonry p , .flexbox-masonry img{
     max-width: 100% !important; 
     display: inline-block !important;
     margin-bottom: 1em !important;
     margin-right: 1em !important;
     flex: 0 0 auto !important;
     width: 100% !important;
+}
+
+#subpageSeries p img{
+    width: 33%;
+    height: auto;
 }
 
 /* Contact form */
@@ -690,9 +693,4 @@ form h2{
     letter-spacing: 3px;
     font-family: 'Gruppo', cursive;
 }
-}
-
-#subpageSeries p img{
-    width: 10%;
-    height: auto;
 }
