@@ -70,7 +70,7 @@ header {
     text-decoration: none;
     color: white;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Gruppo', cursive;
     margin-left: auto;
     margin-right: auto;
@@ -88,7 +88,7 @@ header {
     background-color: black;
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.3) 30%, #000 50%, rgba(0,0,0,.3) 70%);
   -webkit-mask-size: 200%;
-  animation: shine 1s infinite;
+  animation: shine 3s infinite;
 }
 
 footer {
@@ -113,6 +113,15 @@ footer {
     display: flex;
     justify-content: center;
     margin: 2em;
+}
+
+#insta-button:hover{
+    color: white;
+    text-decoration: none;
+    background-color: black;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.3) 30%, #000 50%, rgba(0,0,0,.3) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 3s infinite;
 }
 
 .landing-page{
@@ -1047,5 +1056,31 @@ figure {
     top:40%;
     }
 
+.video-wrapper {
+    width: 80vw;
+    height: 50vh;
+    display: flex;
+    margin-bottom: 5vh;
+    align-self: center;
+}
 
+.video-wrapper iframe {
+    width: 100%;
+}
+
+.take-me{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Gruppo', cursive;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: black;
+    padding: 0em .4em 0em .4em;
+    border: 1px solid white;
+    border-radius: .5em;
+}
 }
