@@ -9,21 +9,29 @@ body {
 }
 
 .logo {
-    width: 8%;
+    width: 5%;
     float: left;
     position: absolute;
     left: 3em;
 }
 
-h1, h2{
+header h1, h2{
     text-transform: uppercase;
-    font-family: 'Gruppo', cursive;
-    padding-top:1em;
+    font-family: 'Lato', sans-serif;
+    padding-top: 1em;
+}
+header h1{
+    font-size: 3.5em;
+    letter-spacing: .5em;
+}
+header h2{
+    letter-spacing: .2em;
+    font-weight: 100;
 }
 
 .about_title, .about_p, .contact_title, .contact_p, .blog_title, .blog_p, .blog_date, .wrapper-title, .caption{
     color: white;
-    font-family: 'Gruppo', cursive;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Menu */
@@ -71,7 +79,7 @@ header {
     color: white;
     text-align: center;
     font-size: 2em;
-    font-family: 'Gruppo', cursive;
+    font-family: 'Lato', sans-serif;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
@@ -107,6 +115,7 @@ footer {
     text-decoration: none;
     font-size: 1.3em;
     border-radius: .5em;
+    font-family: 'Lato', sans-serif;
 }
 
 #insta-button {
@@ -325,7 +334,7 @@ figure {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Gruppo', cursive;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     text-shadow: 2px 2px 4px black;
 }
@@ -404,7 +413,7 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 .blog_subpage a{
     color: black;
     text-decoration: none;
-    font-family: 'Gruppo', cursive;
+    font-family: 'Lato', sans-serif;
 }
   .blog_subpage {
     backface-visibility: hidden;
@@ -472,7 +481,7 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 #subpage h1{
     margin-bottom: 4vh;
     margin-top: 4vh;
-    font-family: 'Gruppo', cursive;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 3.5em;
     text-shadow: 1px 1px 5px grey;
@@ -556,7 +565,7 @@ input{
 }
 
 form h2{
-    font-family: 'Gruppo', cursive;
+    font-family: 'Lato', sans-serif;
     color: white;
     font-size: 2.5em;
 }
@@ -566,7 +575,7 @@ form h2{
     margin-bottom: 3vh;
     font-size: 2em;
     font-weight: bold;
-    font-family: 'Gruppo', cursive; 
+    font-family: 'Lato', sans-serif; 
     background-color: black;
     color: white;
     cursor: pointer;
@@ -705,7 +714,7 @@ figure {
     }
     
     #menu{
-        font-family: 'Gruppo', cursive;
+        font-family: 'Lato', sans-serif;
         letter-spacing: .25em;
     }
     
@@ -749,9 +758,9 @@ figure {
     left: 17%;
     font-size: 5em;
     text-shadow: 2px 2px 2px black;
-    letter-spacing: 10px;
+    letter-spacing: .5em;
     text-transform: uppercase;
-    font-family: 'Gruppo', cursive;
+    font-family: 'Lato', sans-serif;
     }
 
     .landing-page h2 {
@@ -760,9 +769,10 @@ figure {
     left: 17%;
     font-size: 2.5em;
     text-shadow: 2px 2px 2px black;
-    letter-spacing: 3px;
-    font-family: 'Gruppo', cursive;
-    text-transform: uppercase;    
+    letter-spacing: .2em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
 }
 }
 /* Mobile version */
@@ -844,7 +854,7 @@ figure {
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-        font-family: 'Gruppo', cursive;
+        font-family: 'Lato', sans-serif;
         letter-spacing: .25em;
         font-weight: bold;
     }
@@ -885,7 +895,7 @@ figure {
     text-shadow: 2px 2px 2px black;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-family: 'Gruppo', cursive;
+    font-family: 'Lato', sans-serif;
     text-align: center;
     width:100%;
     }
@@ -896,7 +906,7 @@ figure {
     font-size: 1.5em;
     text-shadow: 2px 2px 2px black;
     letter-spacing: 3px;
-    font-family: 'Gruppo', cursive;
+    font-family: 'Lato', sans-serif;
     text-align: center;
     width:100%;
 }
