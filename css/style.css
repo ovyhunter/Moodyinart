@@ -359,9 +359,9 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 
 .flexbox-masonry{
     display: flex;
-    overflow: hidden;
+    overflow: hiden;
     width: 90vw;
-    max-height: 170vh;
+    max-height: 470vh;
     margin-top: 20px;
     margin-bottom: 50px;
     flex-direction: row;
@@ -595,4 +595,9 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     letter-spacing: 3px;
     font-family: 'Gruppo', cursive;
 }
+}
+
+#subpageSeries p img{
+    width: 10%;
+    height: auto;
 }
