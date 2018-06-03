@@ -147,6 +147,7 @@ if (document.querySelector("#subpage")) {
         document.querySelector("#subpage h1").textContent = aPost.title.rendered;
         document.querySelector("#subpage p").innerHTML = aPost.content.rendered;
     }
+    
 }
 
 
@@ -210,10 +211,13 @@ if (document.querySelector("#subpageSeries")) {
     console.log(id);
     function showSinglePostSubpageSeries(aPost) {
         console.log(aPost);
-        document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
-        document.querySelector("#subpageSeries p").innerHTML = aPost.content.rendered;
+//        document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
+        document.querySelector("#subpageSeries div").innerHTML = aPost.content.rendered;
     }
+    
+//        documnet.querySelector("#subpageSeries p").remove();
 }
+
 
 
 // Gallery 2 Page
