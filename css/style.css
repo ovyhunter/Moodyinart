@@ -656,7 +656,7 @@ form h2{
     padding: 0em .3em;
     box-shadow: 1px 1px 2px grey;
     text-transform: uppercase;
-    max-width: 20vw;
+    max-width: 10vw;
 }
 
 #send-button:hover {
@@ -1175,6 +1175,7 @@ header h1{
     font-size: 2em;
     letter-spacing: .1em;
     text-align: center;
+    margin-top:1em;
 }
 header h2{
     letter-spacing: .1em;
@@ -1269,7 +1270,6 @@ textarea{
     border-color: black;
     font-family: serif;
     font-size: 1.em;
-    padding-left:5px;
 }
 input{
     font-family: serif;
@@ -1278,5 +1278,8 @@ input{
     border-style: solid;
     border-color: black;
     max-width: 100vw;
-    padding-left:5px;
 }
+    
+p{
+   font-size:1em;     
+ }
