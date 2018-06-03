@@ -368,9 +368,9 @@ footer {
 /* Gallery 3 */
 
 .gal3-container{
-    margin: .5em;
-    padding: 1em;
+    margin: 2.5em;
     margin-top: 5em;
+    box-shadow: -5px -5px 20px 0px grey;
 }
 
 figure {
@@ -382,11 +382,9 @@ figure {
 .gal3-container img{
     width: 25vw;
     height: auto;
-    border: 1px solid white;
 }
 
 .gal3-container div{
-    margin: .2em;
     position: relative;
 }
 
@@ -425,6 +423,7 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 	opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
+    
 }
 
 .gal3-container figure:hover img {
