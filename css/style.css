@@ -345,18 +345,9 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 .flexbox-masonry {
     display: flex;
     width: 90vw;
-    height: 350vh;
-    margin: auto;
-    position: relative;
-    flex-flow: column wrap;
-}
-
-.flexbox-masonry img{
-    width: 30%;
-    height: auto;
-    display: inline-block;
-    margin-bottom: 1em;
-    margin-right: 1em;
+    height: 300vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .w-container{
@@ -365,8 +356,6 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 
 .flex-item{
     flex: 0 0 auto;
-    max-width: 35%;
-    height: auto;
 }
 .blog_subpage a{
     color: black;
@@ -410,6 +399,46 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     font-size: initial
   }
 
+/*Actual editing gallery*/
+
+#subpageSeries{
+    display: flex;
+}
+
+.flex-item figure{
+    
+}
+
+
+#subpageSeries p {
+    display: flex;
+}
+
+#subpageSeries p , #subpageSeries img{
+    margin-bottom: 1vh;
+    width: 100%
+}
+
+.gallery-icon img{
+    width: 100%;
+    height: 20%;
+}
+
+.gallery-item{
+    display: flex;
+}
+
+#gallery-1{
+    display: flex;
+    width: 90vw;
+    height: 300vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery, .galleryid-81, .gallery-columns-3, .gallery-size-full, .gallery-icon, .portrait, .landscape, .attachment-full, .size-full{
+    display: flex;
+}
 
 /* Contact form */
 

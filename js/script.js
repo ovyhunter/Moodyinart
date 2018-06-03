@@ -212,7 +212,8 @@ if (document.querySelector("#subpageSeries")) {
 
     function showSinglePostSubpageSeries(aPost) {
         console.log(aPost);
-        document.querySelector(".subpage_h1").textContent = aPost.title.rendered;
+        document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
+//        document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
         document.querySelector("#subpageSeries div").innerHTML = aPost.content.rendered;
     }
 }
