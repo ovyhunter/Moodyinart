@@ -68,22 +68,24 @@ header {
 
 .take-me{
     text-decoration: none;
-    color: black;
+    color: white;
     text-align: center;
-    font-family: 'Gruppo', cursive;
     font-size: 2em;
-    width: 20vw;
+    font-family: 'Gruppo', cursive;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
     margin-bottom: 5vh;
-    background-color: darkgray;
+    background-color: black;
+    padding: 0em .4em 0em .4em;
+    border: 1px solid white;
+    border-radius: .5em;
 }
 
 .take-me:hover{
-    color: black;
+    color: white;
     text-decoration: none;
-    background-color: white;
+    background-color: black;
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.3) 30%, #000 50%, rgba(0,0,0,.3) 70%);
   -webkit-mask-size: 200%;
   animation: shine 1s infinite;
@@ -186,6 +188,8 @@ footer {
     background-color: rgba(255,255,255, 0.1);
     text-align: center;
     z-index: 3;
+    text-transform: uppercase;
+    width: 20%;
 
 }
 
@@ -226,6 +230,8 @@ footer {
     background-color: rgba(255,255,255, 0.1);
     text-align: center;
     z-index: 3;
+    text-transform: uppercase;
+    width: 20%;
 }
 
 .parallax2 p {
@@ -265,6 +271,8 @@ footer {
     background-color: rgba(255,255,255, 0.1);
     text-align: center;
     z-index: 3;
+    text-transform: uppercase;
+    width: 20%;
 }
 
 .parallax3 p {
@@ -884,7 +892,7 @@ figure {
 
     .landing-page h2 {
     position: absolute;
-    top: 35%;
+    top: 38%;
     font-size: 1.5em;
     text-shadow: 2px 2px 2px black;
     letter-spacing: 3px;
@@ -892,6 +900,7 @@ figure {
     text-align: center;
     width:100%;
 }
+
     .blog-container img {
     width: 91vw;
     height: auto;
