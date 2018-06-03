@@ -20,7 +20,11 @@ body {
     font-family: 'Gruppo', cursive;
 }
 
-
+#subpageSeries figure div{
+/*    display: flex;*/
+    all: unset;
+    
+}
 
 /* Menu */
     
@@ -282,7 +286,7 @@ figure {
     text-shadow: 2px 2px 4px black;
 }
 
-#seriesPage, #PpPage, #blog{
+#seriesPage, #PpPage, #blog, #subpageSeries{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -353,6 +357,47 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 .flex-item{
     flex: 0 0 auto;
 }
+.blog_subpage a{
+    color: black;
+}
+  .blog_subpage {
+    backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background-color: white;
+  border-radius: 100px;
+  border: 4px solid #030303;
+  border-width: 4px 4px 4px 4px;
+  padding: 5px 20px 5px 20px;
+    color: #ffffff;
+  font-size: 16px;
+  font-family: Helvetica Neue;
+  font-weight: 900;
+  font-style: normal
+  }
+  .blog_subpage > div {
+    color: #999;
+  font-size: 10px;
+  font-family: Helvetica Neue;
+  font-weight: initial;
+  font-style: normal;
+  text-align: center;
+  margin: 0px 0px 0px 0px
+  }
+  .blog_subpage > i {
+    font-size: 1em;
+  border-radius: 0px;
+  border: 0px solid transparent;
+  border-width: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  position: static
+  }
+  .blog_subpage > .ld {
+    font-size: initial
+  }
 
 /*Actual editing gallery*/
 
@@ -361,6 +406,15 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 }
 
 .flex-item figure{
+    
+}
+
+
+#subpageSeries p {
+    display: flex;
+}
+
+#subpageSeries p , #subpageSeries img{
     margin-bottom: 1vh;
     width: 100%
 }
@@ -456,14 +510,17 @@ form h2{
 }
 
 /* Blog */
-
-.blog_article {
-    margin-top: 10vh;
+.blog_article img, .blog_p {
+    width: 20vw;
+    height: 5vh;
 }
 
-.blog_article img, .blog_title, .blog_p {
-    width: 20vw;
-    height: auto;
+.blog_title{
+    width: 36vw;
+}
+
+.blog_p {
+    width: 36vw;
 }
 
 .blog-container{
@@ -480,16 +537,58 @@ figure {
 
 .blog-container img{
     width: 35vw;
-    height: auto;
+    height: 35vh;
     border: 1px solid white;
 }
 
 .blog-container div{
     margin: .2em;
     position: relative;
+    float: left;
 }
 
+/*Subpage Serie*/
+.subpageSeries-container{
+    margin: .5em;
+    padding: 1em;
+    margin-top: 5em;
+}
+.subpageSeries-container img{
+    border: 1px solid white;
+}
 
+.subpageSeries-container div{
+    margin: .2em;
+/*    position: relative;*/
+}
+
+#subpageSeries p{
+    padding: 1rem;
+/*    height: 100%;*/
+    
+}
+
+#subpageSeries img {
+    width: 50vw;
+    height: 100%;
+}
+
+@media screen and (max-width: 575px) {
+    .blog_p{
+        margin-bottom: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 1350px) and (min-width: 992px) {
+    .blog_p {
+    height: auto;
+    margin-bottom: 3rem;
+}
+    .blog_subpage{
+        margin-top: 1%;
+    }
+}
 
 @media screen and (min-width: 992px) {
     
@@ -695,4 +794,14 @@ figure {
     letter-spacing: 3px;
     font-family: 'Gruppo', cursive;
 }
+    .blog-container img {
+    width: 85vw;
+    height: auto;
+}
+    .blog_p {
+        width: 85vw;
+    }
+    .blog_title{
+        width: auto;
+    }
 }

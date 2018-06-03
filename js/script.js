@@ -72,7 +72,7 @@ let lookingForData = false;
 
 function fetchDataBlog() {
     lookingForData = true;
-    fetch("http://www.paulchelaru.com/wp-json/wp/v2/blog?_embed&per_page=2&page=" + page)
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/blog?_embed&per_page=4&page=" + page)
         .then(e => e.json())
         .then(showDataBlog)
 }
@@ -97,10 +97,11 @@ function showSinglePostBlog(aPost) {
         clone.querySelector(".blog_date").textContent = aPost.acf.date;
 
         let descp = aPost.content.rendered;
-        if (descp.length > 50) {
-            descp = descp.substring(0, 50);
-            descp = descp + "...";
+        if (descp.length > 143) {
+            descp = descp.substring(0, 143);
+//            descp = descp + "...";
         }
+        descp = descp + "...";
         clone.querySelector(".blog_p").innerHTML = descp;
 
 
@@ -146,6 +147,7 @@ if (document.querySelector("#subpage")) {
         document.querySelector("#subpage h1").textContent = aPost.title.rendered;
         document.querySelector("#subpage p").innerHTML = aPost.content.rendered;
     }
+    
 }
 
 
@@ -211,8 +213,13 @@ if (document.querySelector("#subpageSeries")) {
         console.log(aPost);
         document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
         document.querySelector("#subpageSeries figure").innerHTML = aPost.content.rendered;
+//        document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
+        document.querySelector("#subpageSeries div").innerHTML = aPost.content.rendered;
     }
+    
+//        documnet.querySelector("#subpageSeries p").remove();
 }
+
 
 
 // Gallery 2 Page
