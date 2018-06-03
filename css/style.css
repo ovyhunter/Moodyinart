@@ -398,19 +398,20 @@ footer {
 /* Gallery 2 */
 
 .gal2-container{
+    display: inline-block;
     width: 33%;
-    margin: 2.5em;
-    margin-top: 5em;
-    box-shadow: -5px -5px 20px 0px grey;
+    margin-top: 1em;
+    position: relative;
 }
 
 .PpPage_img{
     width: 100%;
-    position: relative
 }
 
 .PpPage-wrapper{
     display: block;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 .gal2-container h1 {
@@ -418,11 +419,11 @@ footer {
 	padding: 0;
 	color: white;
 	font-size: 1.7em;
+    position: absolute;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
     opacity: 0;
     opacity: 0;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -438,13 +439,13 @@ footer {
 .masonry{
     display: flex;
     flex-flow: column wrap;
-    height: 200vh;
-    overflow: hidden;
+    height: 300vh;
 }
 
 /* Opacity effect - source: Codepen
 
 https://codepen.io/nxworld/pen/ZYNOBZ */
+
 
 .gal2-container img {
 	opacity: 1;
@@ -456,10 +457,13 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 	opacity: .5;
 }
 
+
+
 .gal2-container:hover h1 {
     opacity: 1;
     z-index: 3;
 }
+
 
 
 /* Gallery 3 */
