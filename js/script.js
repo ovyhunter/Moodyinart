@@ -214,7 +214,7 @@ if (document.querySelector("#subpageSeries")) {
         console.log(aPost);
         document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
 //        document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
-        document.querySelector("#subpageSeries div").innerHTML = aPost.content.rendered;
+        document.querySelector("#subpageSeries").innerHTML = aPost.content.rendered;
     }
 }
 
