@@ -220,33 +220,58 @@ if (document.querySelector("#subpageSeries")) {
 
 
 
-// Gallery 2 Page
-function fetchDataPpGallery() {
-    fetch("http://www.paulchelaru.com/wp-json/wp/v2/people_portraits?_embed")
+//Gallery 2 Page
+function fetchDataSeriesPpGallery() {
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/people_portraits?_embed?_embed")
         .then(e => e.json())
-        .then(showDataPpGallery)
+        .then(showDataSeriesPpGallery)
 }
 
-function showDataPpGallery(data) {
-    //    console.log(data);
-    data.forEach(showSinglePostPpGallery);
+function showDataSeriesPpGallery(data) {
+    console.log(data);
+    data.forEach(showSinglePostSeriesPpGallery);
 }
 
-function showSinglePostPpGallery(aPost) {
+function showSinglePostSeriesPpGallery(aPost) {
     if (document.querySelector("#PpPage_template")) {
-        console.log(aPost.acf.image);
+        //        console.log(aPost.acf.image);
         let template = document.querySelector("#PpPage_template").content;
         let clone = template.cloneNode(true);
 
-        //clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
-
-        clone.querySelector("figure").style.backgroundImage = "url(" + aPost.acf.image + ")";
-
-        //        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
-        //        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
+        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
+        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
 
         let section = document.querySelector("#PpPage");
         section.appendChild(clone);
+
     }
 }
-fetchDataPpGallery();
+fetchDataSeriesPpGallery();
+
+//Gallery 1 Page
+function fetchDataSeriesSpGallery() {
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/self_portraits?_embed?_embed")
+        .then(e => e.json())
+        .then(showDataSeriesSpGallery)
+}
+
+function showDataSeriesSpGallery(data) {
+    console.log(data);
+    data.forEach(showSinglePostSeriesSpGallery);
+}
+
+function showSinglePostSeriesSpGallery(aPost) {
+    if (document.querySelector("#SpPage_template")) {
+        //        console.log(aPost.acf.image);
+        let template = document.querySelector("#SpPage_template").content;
+        let clone = template.cloneNode(true);
+
+        clone.querySelector(".SpPage_img").setAttribute("src", aPost.acf.image);
+        clone.querySelector(".SpPage_title").innerHTML = aPost.title.rendered;
+
+        let section = document.querySelector("#SpPage");
+        section.appendChild(clone);
+
+    }
+}
+fetchDataSeriesSpGallery();
