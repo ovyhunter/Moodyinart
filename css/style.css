@@ -400,7 +400,7 @@ footer {
 .gal2-container{
     display: inline-block;
     width: 33%;
-    margin-top: 1em;
+    margin-top: 0em;
     position: relative;
 }
 
@@ -410,8 +410,7 @@ footer {
 
 .PpPage-wrapper{
     display: block;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin: 10vh 4vw 10vh 4vw;
 }
 
 .gal2-container h1 {
@@ -439,7 +438,6 @@ footer {
 .masonry{
     display: flex;
     flex-flow: column wrap;
-    height: 300vh;
 }
 
 /* Opacity effect - source: Codepen
