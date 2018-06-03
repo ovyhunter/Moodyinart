@@ -37,8 +37,6 @@ h1, h2{
         width: 30%;
     }
 
-
-
 /* Index */
 
 header {
@@ -173,6 +171,7 @@ footer {
     color: white;
     padding: 1em;
     align-self: flex-end;
+    font-size: 2em;
 }
 
 .parallax2 {
@@ -208,6 +207,7 @@ footer {
     color: white;
     padding: 1em;
     align-self: flex-end;
+    font-size: 2em;
 }
 
 .parallax3 {
@@ -241,8 +241,10 @@ footer {
 .parallax3 p {
     text-decoration: none;
     color: white;
-    padding: 1em;
+    padding: .5em;
     align-self: flex-end;
+    font-size: 2em;
+    background-color: rgba(255,255,255, 0.1);
 }
 
 .caption{
@@ -840,7 +842,7 @@ figure {
     
     .landing-page h1 {
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: 15%;
     font-size: 2em;
     text-shadow: 2px 2px 2px black;
@@ -851,7 +853,7 @@ figure {
 
     .landing-page h2 {
     position: absolute;
-    top: 25%;
+    top: 35%;
     left: 10%;
     font-size: 1.5em;
     text-shadow: 2px 2px 2px black;
