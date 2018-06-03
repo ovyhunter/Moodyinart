@@ -177,20 +177,24 @@ function showDataSeriesGallery(data) {
 
 function showSinglePostSeriesGallery(aPost) {
     if (document.querySelector("#seriesPage_template")) {
-//        console.log(aPost.acf.image);
+        console.log(aPost);
         let template = document.querySelector("#seriesPage_template").content;
         let clone = template.cloneNode(true);
 
         clone.querySelector(".seriesPage_img").setAttribute("src", aPost.acf.image);
         clone.querySelector(".seriesPage_title").innerHTML = aPost.title.rendered;
         clone.querySelector(".seriesPage_a").href = "subpageSeries.html?id=" + aPost.id;
+//        if(document.querySelector("."))
+        clone.querySelector(".seriesPage_content").innerHTML = aPost.content.redered;
 
         //        if (aPost._embedded["wp:featuredmedia"]) { //img is there
         //            clone.querySelector(".img").setAttribute("src", aPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
         //        } else { // no img
         //            clone.querySelector(".img").remove();
         //        }
-
+        
+        
+//            clone.querySelector(".seriesPage_a").remove();
         let section = document.querySelector("#seriesPage");
         section.appendChild(clone);
 
@@ -215,6 +219,7 @@ if (document.querySelector("#subpageSeries")) {
 }
 
 
+
 // Gallery 2 Page
 function fetchDataPpGallery() {
     fetch("http://www.paulchelaru.com/wp-json/wp/v2/people_portraits?_embed")
@@ -233,12 +238,13 @@ function showSinglePostPpGallery(aPost) {
         let template = document.querySelector("#PpPage_template").content;
         let clone = template.cloneNode(true);
 
-        //clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
-        
-        clone.querySelector("figure").style.backgroundImage = "url("+aPost.acf.image +")";
-        
 //        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
-//        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
+        
+//        clone.querySelector("figure").style.backgroundImage = "url("+aPost.acf.image +")";
+        
+        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
+        clone.querySelector(".PpPage_title").innerHTML = aPost.title.rendered;
+        clone.querySelector(".PpPage_p").innerHTML = aPost.content.rendered;
 
         let section = document.querySelector("#PpPage");
         section.appendChild(clone);
@@ -246,3 +252,33 @@ function showSinglePostPpGallery(aPost) {
 }
 fetchDataPpGallery();
 
+//Gallery 1 Page
+function fetchDataSpGallery() {
+    fetch("http://www.paulchelaru.com/wp-json/wp/v2/self_portraits?_embed")
+        .then(e => e.json())
+        .then(showDataSpGallery)
+}
+
+function showDataSpGallery(data) {
+//    console.log(data);
+    data.forEach(showSinglePostSpGallery);
+}
+
+function showSinglePostSpGallery(aPost) {
+    if (document.querySelector("#SpPage_template")) {
+        let template = document.querySelector("#SpPage_template").content;
+        let clone = template.cloneNode(true);
+
+//        clone.querySelector(".PpPage_img").setAttribute("src", aPost.acf.image);
+        
+//        clone.querySelector("figure").style.backgroundImage = "url("+aPost.acf.image +")";
+        
+        clone.querySelector(".SpPage_img").setAttribute("src", aPost.acf.image);
+        clone.querySelector(".SpPage_title").innerHTML = aPost.title.rendered;
+        clone.querySelector(".SpPage_p").innerHTML = aPost.content.rendered;
+        
+        let section = document.querySelector("#SpPage");
+        section.appendChild(clone);
+    }
+}
+fetchDataSpGallery();
