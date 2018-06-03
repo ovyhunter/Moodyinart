@@ -210,7 +210,7 @@ if (document.querySelector("#subpageSeries")) {
     function showSinglePostSubpageSeries(aPost) {
         console.log(aPost);
         document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
-        document.querySelector("#subpageSeries p").innerHTML = aPost.content.rendered;
+        document.querySelector("#subpageSeries figure").innerHTML = aPost.content.rendered;
     }
 }
 
