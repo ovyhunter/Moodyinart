@@ -45,6 +45,32 @@ header h2{
     font-family: 'Lato', sans-serif;
 }
 
+/*Contact*/
+
+#contact{
+    margin-top:5%;
+    margin-left:15%;
+    margin-right:15%;
+}
+
+.form-wrapper{
+    margin-left:15%;
+    margin-right:15%;
+}
+
+form h2{
+    font-family: 'Lato', sans-serif;
+}
+
+input{
+    font-family: 'Lato', sans-serif;
+    width:100%
+}
+
+textarea{
+    width:30em;
+}
+
 /*About*/
 
 #about{
@@ -813,7 +839,7 @@ figure {
     left: 17%;
     font-size: 5em;
     text-shadow: 2px 2px 2px black;
-    letter-spacing: .5em;
+    letter-spacing: .2em;
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
     }
@@ -1176,3 +1202,7 @@ header h2{
 .about_article p{
     font-size:1.1em;
 }
+    
+form{
+   width:100%;     
+    }
