@@ -186,6 +186,8 @@ footer {
     background-color: rgba(255,255,255, 0.1);
     text-align: center;
     z-index: 3;
+    text-transform: uppercase;
+    width: 20%;
 
 }
 
@@ -226,6 +228,8 @@ footer {
     background-color: rgba(255,255,255, 0.1);
     text-align: center;
     z-index: 3;
+    text-transform: uppercase;
+    width: 20%;
 }
 
 .parallax2 p {
@@ -265,6 +269,8 @@ footer {
     background-color: rgba(255,255,255, 0.1);
     text-align: center;
     z-index: 3;
+    text-transform: uppercase;
+    width: 20%;
 }
 
 .parallax3 p {
@@ -884,7 +890,7 @@ figure {
 
     .landing-page h2 {
     position: absolute;
-    top: 35%;
+    top: 38%;
     font-size: 1.5em;
     text-shadow: 2px 2px 2px black;
     letter-spacing: 3px;
@@ -892,6 +898,7 @@ figure {
     text-align: center;
     width:100%;
 }
+
     .blog-container img {
     width: 85vw;
     height: auto;
