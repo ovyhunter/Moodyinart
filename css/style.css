@@ -68,8 +68,6 @@ header h1{
 }
 header h2{
     font-size:1.5em;
-    letter-spacing: .3em;
-    font-weight: 100;
 }
 
 .about_title, .about_p, .contact_title, .contact_p, .blog_title, .blog_p, .blog_date, .wrapper-title, .caption{
@@ -1203,16 +1201,15 @@ figure {
 
 header h1{
     font-size: 2em;
-    letter-spacing: .1em;
+    letter-spacing: .25em;
     text-align: center;
-    margin-top:1em;
+    top:1em;
 }
 header h2{
-    letter-spacing: .1em;
-    font-weight: 80;
     font-size: 1em;
-    padding-top:0.5em;
+    top:1.25em;
     text-align: center;
+    
 }
 
 /*Blog mobile*/
