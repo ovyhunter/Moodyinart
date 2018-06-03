@@ -597,7 +597,13 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 }
 }
 
-#subpageSeries p img{
-    width: 10%;
+/* Blog */
+
+.blog_article {
+    margin-top: 10vh;
+}
+.blog_article img, .blog_title, .blog_p {
+    width: 20vw;
     height: auto;
 }
+
