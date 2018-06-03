@@ -161,12 +161,16 @@ footer {
     color: white;
 }
 
-.img_about {
-    padding-bottom: 5%;
-    width: 100%;
-    height: auto;
+.about_article {
+    margin-top: 5rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.about_img {
+    width:  100%;
+}
 
 /* Portfolio */
 
