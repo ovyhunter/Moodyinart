@@ -282,7 +282,7 @@ figure {
     text-shadow: 2px 2px 4px black;
 }
 
-#seriesPage, #PpPage{
+#seriesPage, #PpPage, #blog{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -486,6 +486,29 @@ form h2{
 .blog_article img, .blog_title, .blog_p {
     width: 20vw;
     height: auto;
+}
+
+.blog-container{
+    margin: .5em;
+    padding: 1em;
+    margin-top: 5em;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.blog-container img{
+    width: 35vw;
+    height: auto;
+    border: 1px solid white;
+}
+
+.blog-container div{
+    margin: .2em;
+    position: relative;
 }
 
 
@@ -694,5 +717,4 @@ form h2{
     letter-spacing: 3px;
     font-family: 'Gruppo', cursive;
 }
-<<<<<<< HEAD
 }
