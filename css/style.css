@@ -431,15 +431,6 @@ footer {
     text-shadow: 2px 2px 4px black;
 }
 
-#seriesPage, #PpPage, #blog, #subpageSeries, #SpPage{
-    display: unset;
-}
-
-.masonry{
-    display: flex;
-    flex-flow: column wrap;
-}
-
 /* Opacity effect - source: Codepen
 
 https://codepen.io/nxworld/pen/ZYNOBZ */
@@ -467,15 +458,19 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 /* Gallery 3 */
 
 .gal3-container{
+    display: flex;
     margin: 2.5em;
     margin-top: 5em;
     box-shadow: -5px -5px 20px 0px grey;
 }
 
 figure {
+    display: flex;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .gal3-container img{
@@ -506,7 +501,9 @@ figure {
 }
 
 #seriesPage, #PpPage, #blog, #subpageSeries, #SpPage{
-    display: unset;
+    display: flex;
+    flex-flow: column wrap;
+    height: 175vh;
 }
 
 /* Opacity effect - source: Codepen
@@ -532,6 +529,7 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     z-index: 1;
 }
 
+/*Self-portraits*/
 
 .galSp-container figure {
 	background: grey;
@@ -555,10 +553,8 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 
 .galSp-container{
     display: flex;
-    justify-content: center;
     margin: 2.5em;
     margin-top: 5em;
-   
 }
 
 .galSp-container img{
