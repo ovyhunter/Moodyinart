@@ -504,12 +504,13 @@ figure {
     font-weight: bold;
     text-shadow: 2px 2px 4px black;
 }
-
-#seriesPage, #PpPage, #blog, #subpageSeries, #SpPage{
+ #PpPage{
     display: flex;
     flex-flow: column wrap;
     height: 175vh;
 }
+
+
 
 /* Opacity effect - source: Codepen
 
