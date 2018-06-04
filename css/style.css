@@ -506,7 +506,9 @@ figure {
 }
 
 #seriesPage, #PpPage, #blog, #subpageSeries, #SpPage{
-    display: unset;
+    display: flex;
+    flex-flow: column wrap;
+    height: 175vh;
 }
 
 /* Opacity effect - source: Codepen
