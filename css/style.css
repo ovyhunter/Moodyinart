@@ -650,6 +650,12 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     padding: 1.5vw;
 }
 
+#seriesPage, #blog, #subpageSeries, #SpPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 #subpage img{
     display: block;
     margin-left: auto;
