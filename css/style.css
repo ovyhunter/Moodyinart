@@ -44,7 +44,6 @@ body {
     width:100%;
 }
 
-
 p{
     font-size: 1.2em;
     font-weight: 80;
@@ -94,7 +93,7 @@ form h2{
 
 input{
     font-family: 'Lato', sans-serif;
-    width:100%
+    width:100%;
 }
 
 textarea{
@@ -102,10 +101,6 @@ textarea{
 }
 
 /*About*/
-
-#about{
-    
-}
 
 .about_p{
     margin-top:40px;
@@ -188,7 +183,6 @@ footer {
     padding-bottom:30px;
     font-weight: 100;
     font-family: 'Lato', sans-serif;
-    
 }
 
 #insta-link {
@@ -400,7 +394,6 @@ footer {
 .gal2-container{
     display: inline-block;
     width: 33%;
-    margin-top: 0em;
     position: relative;
 }
 
@@ -455,14 +448,10 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
 	opacity: .5;
 }
 
-
-
 .gal2-container:hover h1 {
     opacity: 1;
     z-index: 3;
 }
-
-
 
 /* Gallery 3 */
 
@@ -596,7 +585,7 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     color: white;
     text-decoration: none;
     font-family: 'Lato', sans-serif;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
   .blog_subpage {
   margin-top: 4rem;
@@ -691,11 +680,6 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     display: flex;
 }
 
-.flex-item figure{
-    
-}
-
-
 #subpageSeries p {
     display: flex;
 }
@@ -704,16 +688,12 @@ https://codepen.io/nxworld/pen/ZYNOBZ */
     margin-bottom: 1vh;
 }
 
-.gallery-icon img{
-}
-
 .gallery-item{
     display: flex;
 }
 
 #gallery-1{
     display: flex;
-/*    width: 90vw;*/
     height: 300vh;
     margin-left: auto;
     margin-right: auto;
@@ -816,7 +796,7 @@ form h2{
     margin-top:1em;
     margin-bottom:1em;
     letter-spacing: 0.05em;
-    font-size:1.8em
+    font-size:1.8em;
 }
 
 .blog_p {
@@ -849,24 +829,13 @@ figure {
 
 /*Actual editing gallery*/
 
-#subpageSeries{
-/*    display: flex;*/
-}
-
-#subpageSeries figure {
-/*    display: flex;*/
-}
-
-#subpageSeries p , #subpageSeries img{
+#subpageSeries img{
     margin-bottom: 1vh;
 }
 
 .subpageSeries-container{
     margin: .5em;
     padding: 1em;
-}
-.subpageSeries-container img{
-/*    border: 1px solid white;*/
 }
 
 .subpageSeries-container div{
@@ -880,18 +849,11 @@ figure {
 }
 
 #subpageSeries figure{
-    padding: 1rem;
-/*    height: 100%;*/
-    
-}
-
-#subpageSeries figure div{
-    
+    padding: 1rem;    
 }
 
 #subpageSeries img {
     padding: 1rem;
-
 }
 
 @media screen and (max-width: 575px) {
@@ -981,6 +943,7 @@ figure {
     font-weight: 300;
 }
 }
+
 /* Mobile version */
 @media screen and (max-width: 992px) {
     /* Logo */
@@ -1309,7 +1272,7 @@ header h2{
 
 .blog_title{
    text-transform: uppercase;
-    font-size:2em
+    font-size:2em;
 }
 
 /*about mobile*/
