@@ -17,10 +17,10 @@ function showSinglePostAbout(aPost) {
         console.log(aPost);
         let template = document.querySelector("#about_template").content;
         let clone = template.cloneNode(true);
-//        clone.querySelector(".about_title").textContent = aPost.title.rendered;
+        //        clone.querySelector(".about_title").textContent = aPost.title.rendered;
         clone.querySelector(".about_p").innerHTML = aPost.content.rendered;
         clone.querySelector(".about_img").setAttribute("src", aPost.acf.blog_image.url);
-        
+
         let section = document.querySelector("#about");
         section.appendChild(clone);
     }
@@ -144,15 +144,18 @@ if (document.querySelector("#subpage")) {
 //Arrow To
 
 if (document.querySelector("#arrowTo")) {
+
     var arrowToTop = document.querySelector("#arrowTo");
     arrowToTop.addEventListener('click', function () {
         var element = document.getElementById("navbar-id");
         element.scrollIntoView({
             alignToTop: true,
-            behavior: "smooth",
             block: "start"
         });
+        let landingPage = document.querySelector(".landing-page");
+                landingPage.style.display = "none"
     });
+    
 }
 
 //Gallery 3 Page
@@ -203,7 +206,7 @@ if (document.querySelector("#subpageSeries")) {
     function showSinglePostSubpageSeries(aPost) {
         console.log(aPost);
         document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
-//        document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
+        //        document.querySelector("#subpageSeries h1").textContent = aPost.title.rendered;
         document.querySelector("#subpageSeries").innerHTML = aPost.content.rendered;
     }
 }
@@ -268,21 +271,23 @@ fetchDataSeriesSpGallery();
 
 //Scroll buttom
 // When the user scrolls down 20px from the top of the document, show the button
-if(document.querySelector("#myBtn")) {
-window.onscroll = function() {scrollFunction()};
+if (document.querySelector("#myBtn")) {
+    window.onscroll = function () {
+        scrollFunction()
+    };
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
     }
-}
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
 }
